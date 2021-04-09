@@ -15,6 +15,7 @@ namespace ForumDyskusyjne.Models
         public virtual ICollection<Message> Messages { get; set; }
         public virtual ICollection<PrivateMessage> PrivateMessagesSend { get; set; }
         public virtual ICollection<PrivateMessage> PrivateMessagesReceived { get; set; }
+        public virtual ICollection<AccountForum> AccountForums { get; set; }
 
     }
 }

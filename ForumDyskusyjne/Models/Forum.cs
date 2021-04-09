@@ -14,5 +14,6 @@ namespace ForumDyskusyjne.Models
         public int ForumCategoryId { get; set; }
         public virtual ForumCategory ForumCategory { get; set; }
         public virtual ICollection<Thread> Threads { get; set; }
+        public virtual ICollection<AccountForum> AccountForums { get; set; }
     }
 }

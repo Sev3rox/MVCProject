@@ -169,3 +169,4 @@ C:\Users\PC\Desktop\ForumDyskusyjne\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.cs
 C:\Users\PC\Desktop\ForumDyskusyjne\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.dll
 C:\Users\PC\Desktop\ForumDyskusyjne\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.pdb
 C:\Users\PC\Desktop\ForumDyskusyjne\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v2.resources
+C:\Users\PC\Desktop\ForumDyskusyjne\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v3.resources

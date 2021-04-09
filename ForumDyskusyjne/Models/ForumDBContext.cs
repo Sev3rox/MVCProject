@@ -17,5 +17,6 @@ namespace ForumDyskusyjne.Models
         public DbSet<Message> Messages { get; set; }
         public DbSet<PrivateMessage> PrivateMessages { get; set; }
         public DbSet<Thread> Threads { get; set; }
+        public DbSet<AccountForum> AccountForums { get; set; }
     }
 }

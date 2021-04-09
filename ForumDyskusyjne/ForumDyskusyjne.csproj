@@ -146,8 +146,13 @@
     <Compile Include="Migrations\202104041115382_v2.designer.cs">
       <DependentUpon>202104041115382_v2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104091232139_v3.cs" />
+    <Compile Include="Migrations\202104091232139_v3.Designer.cs">
+      <DependentUpon>202104091232139_v3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountForum.cs" />
     <Compile Include="Models\Annoucement.cs" />
     <Compile Include="Models\BannedWord.cs" />
     <Compile Include="Models\Forum.cs" />
@@ -198,11 +203,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Accounts\Create.cshtml" />
-    <Content Include="Views\Accounts\Delete.cshtml" />
-    <Content Include="Views\Accounts\Details.cshtml" />
-    <Content Include="Views\Accounts\Edit.cshtml" />
-    <Content Include="Views\Accounts\Index.cshtml" />
     <Content Include="Views\Annoucements\Create.cshtml" />
     <Content Include="Views\Annoucements\Delete.cshtml" />
     <Content Include="Views\Annoucements\Details.cshtml" />
@@ -213,11 +213,6 @@
     <Content Include="Views\BannedWords\Details.cshtml" />
     <Content Include="Views\BannedWords\Edit.cshtml" />
     <Content Include="Views\BannedWords\Index.cshtml" />
-    <Content Include="Views\Fora\Create.cshtml" />
-    <Content Include="Views\Fora\Delete.cshtml" />
-    <Content Include="Views\Fora\Details.cshtml" />
-    <Content Include="Views\Fora\Edit.cshtml" />
-    <Content Include="Views\Fora\Index.cshtml" />
     <Content Include="Views\ForumCategories\Create.cshtml" />
     <Content Include="Views\ForumCategories\Delete.cshtml" />
     <Content Include="Views\ForumCategories\Details.cshtml" />
@@ -238,6 +233,16 @@
     <Content Include="Views\Threads\Details.cshtml" />
     <Content Include="Views\Threads\Edit.cshtml" />
     <Content Include="Views\Threads\Index.cshtml" />
+    <Content Include="Views\Accounts\Create.cshtml" />
+    <Content Include="Views\Accounts\Delete.cshtml" />
+    <Content Include="Views\Accounts\Details.cshtml" />
+    <Content Include="Views\Accounts\Edit.cshtml" />
+    <Content Include="Views\Accounts\Index.cshtml" />
+    <Content Include="Views\Fora\Create.cshtml" />
+    <Content Include="Views\Fora\Delete.cshtml" />
+    <Content Include="Views\Fora\Details.cshtml" />
+    <Content Include="Views\Fora\Edit.cshtml" />
+    <Content Include="Views\Fora\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104021202472_v1.resx">
@@ -245,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104041115382_v2.resx">
       <DependentUpon>202104041115382_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104091232139_v3.resx">
+      <DependentUpon>202104091232139_v3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
