@@ -12,9 +12,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Account.Name)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Thread.Name)
         </th>
         <th>
@@ -23,14 +20,14 @@
         <th>
             @Html.DisplayNameFor(model => model.Order)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountId)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Account.Name)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Thread.Name)
         </td>
@@ -39,6 +36,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Order)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountId)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.MessageId }) |

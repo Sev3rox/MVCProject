@@ -12,7 +12,7 @@ namespace ForumDyskusyjne.Controllers
 {
     public class PrivateMessagesController : Controller
     {
-        private ForumDBContext db = new ForumDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: PrivateMessages
         public ActionResult Index()

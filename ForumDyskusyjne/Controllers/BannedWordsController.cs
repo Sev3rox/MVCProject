@@ -12,7 +12,7 @@ namespace ForumDyskusyjne.Controllers
 {
     public class BannedWordsController : Controller
     {
-        private ForumDBContext db = new ForumDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: BannedWords
         public ActionResult Index()

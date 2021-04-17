@@ -12,12 +12,12 @@ namespace ForumDyskusyjne.Controllers
 {
     public class MessagesController : Controller
     {
-        private ForumDBContext db = new ForumDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Messages
         public ActionResult Index()
         {
-            var messages = db.Messages.Include(m => m.Account).Include(m => m.Thread);
+            var messages = db.Messages.Include(m => m.Thread);
             return View(messages.ToList());
         }
 
@@ -39,7 +39,6 @@ namespace ForumDyskusyjne.Controllers
         // GET: Messages/Create
         public ActionResult Create()
         {
-            ViewBag.AccountId = new SelectList(db.Accounts, "AccountId", "Name");
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name");
             return View();
         }
@@ -58,7 +57,6 @@ namespace ForumDyskusyjne.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AccountId = new SelectList(db.Accounts, "AccountId", "Name", message.AccountId);
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);
             return View(message);
         }
@@ -75,7 +73,6 @@ namespace ForumDyskusyjne.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.AccountId = new SelectList(db.Accounts, "AccountId", "Name", message.AccountId);
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);
             return View(message);
         }
@@ -93,7 +90,6 @@ namespace ForumDyskusyjne.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.AccountId = new SelectList(db.Accounts, "AccountId", "Name", message.AccountId);
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);
             return View(message);
         }

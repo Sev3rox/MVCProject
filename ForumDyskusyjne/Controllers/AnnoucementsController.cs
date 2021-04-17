@@ -12,7 +12,7 @@ namespace ForumDyskusyjne.Controllers
 {
     public class AnnoucementsController : Controller
     {
-        private ForumDBContext db = new ForumDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Annoucements
         public ActionResult Index()

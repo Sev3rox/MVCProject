@@ -12,9 +12,9 @@ namespace ForumDyskusyjne.Models
         public int PrivateMessageId { get; set; }
         public string Text { get; set; }
         public int SenderId { get; set; }
-        public virtual Account Sender { get; set; }
+        public virtual ApplicationUser Sender { get; set; }
         public int ReceiverId { get; set; }
-        public virtual Account Receiver { get; set; }
+        public virtual ApplicationUser Receiver { get; set; }
         public byte[] Attachment { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace ForumDyskusyjne.Controllers
 {
     public class ForumCategoriesController : Controller
     {
-        private ForumDBContext db = new ForumDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: ForumCategories
         public ActionResult Index()

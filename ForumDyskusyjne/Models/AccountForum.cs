@@ -11,7 +11,7 @@ namespace ForumDyskusyjne.Models
         public int AccountId {get; set;}
         public int ForumId { get; set; }
 
-        public virtual Account Account { get; set; }
+        public virtual ApplicationUser User { get; set; }
         public virtual Forum Forum { get; set; }
     }
 }

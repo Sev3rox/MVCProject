@@ -13,7 +13,7 @@ namespace ForumDyskusyjne.Models
         public int ThreadId { get; set; }
         public virtual Thread Thread{ get; set; }
         public int AccountId { get; set; }
-        public virtual Account Account { get; set; }
+        public virtual ApplicationUser User { get; set; }
 
     }
 }
