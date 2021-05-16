@@ -19,12 +19,15 @@ namespace ForumDyskusyjne.Models
         }
 
                            //tu moze cos dodac idk co jest basicowo
+		public int msg { get; set; }
         public byte[] Image { get; set; }
-        public virtual ICollection<Message> Messages { get; set; }
+		public Rank Rank { get; set; }
+		public virtual ICollection<Message> Messages { get; set; }
         public virtual ICollection<PrivateMessage> PrivateMessagesSend { get; set; }
         public virtual ICollection<PrivateMessage> PrivateMessagesReceived { get; set; }
         public virtual ICollection<AccountForum> AccountForums { get; set; }
-    }
+		
+	}
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -47,10 +50,12 @@ namespace ForumDyskusyjne.Models
         public DbSet<PrivateMessage> PrivateMessages { get; set; }
         public DbSet<Thread> Threads { get; set; }
         public DbSet<AccountForum> AccountForums { get; set; }
+
+        public System.Data.Entity.DbSet<ForumDyskusyjne.Models.Rank> Ranks { get; set; }
     }
 
 
-	public class IdentityManager
+    public class IdentityManager
 	{
 		public RoleManager<IdentityRole> LocalRoleManager
 		{

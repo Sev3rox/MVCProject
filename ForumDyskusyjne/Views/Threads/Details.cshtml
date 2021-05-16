@@ -52,7 +52,7 @@
 
     </dl>
 </div>
-@Html.ActionLink("Comment", "../Messages/Create/"+Model.ThreadId)
+@Html.ActionLink("Comment", "../Messages/Create/" + Model.ThreadId)
 
 <table class="table">
     @foreach (var item in ViewBag.Messages)
@@ -66,10 +66,25 @@
 
         </tr>
     }
-    </table>
+</table>
+
+</br>
+</br>
 
 
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ThreadId }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+@if (ViewBag.Page > 0)
+{
+
+    @Html.ActionLink("Prev", "Details", new { id = Model.ThreadId, Page = ViewBag.Page - 1 }, null);
+}
+
+@if (ViewBag.Page < ViewBag.MaxPage)
+{
+    
+    @Html.ActionLink("Next", "Details", new { id = Model.ThreadId, Page = ViewBag.Page + 1 }, null);
+}
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ThreadId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

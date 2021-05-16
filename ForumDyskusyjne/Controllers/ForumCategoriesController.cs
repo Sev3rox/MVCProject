@@ -17,7 +17,15 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
         // GET: ForumCategories
         public ActionResult Index()
         {
-            return View(db.ForumCategorys.ToList());
+            var list = db.ForumCategorys.ToList();
+            var x = db.ForumCategorys.FirstOrDefault(a=>a.Name=="no Category");
+            if (x != null)
+            {
+                if (list.Contains(x))
+                    list.Remove(x);
+            }
+
+            return View(list);
         }
 
         // GET: ForumCategories/Details/5

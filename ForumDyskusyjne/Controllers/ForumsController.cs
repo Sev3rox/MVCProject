@@ -109,6 +109,9 @@ namespace ForumDyskusyjne.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Forum forum = db.Forums.Find(id);
+
+         
+
             ViewBag.Threads = db.Threads.Where(a => a.ForumId == id).ToList();
             if (forum == null)
             {
@@ -117,10 +120,17 @@ namespace ForumDyskusyjne.Controllers
             return View(forum);
         }
 
+
         // GET: Forums/Create
         public ActionResult Create()
         {
             ViewBag.ForumCategoryId = new SelectList(db.ForumCategorys, "ForumCategoryId", "Name");
+            ViewBag.Permission = new SelectList(
+    new List<SelectListItem>
+    {
+        new SelectListItem { Text = "Blocked for notlogged", Value = "1"},
+        new SelectListItem { Text = "Open for notlogged", Value = "2"},
+    }, "Value", "Text");
             return View();
         }
 
@@ -133,6 +143,7 @@ namespace ForumDyskusyjne.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.Forums.Add(forum);
                 db.SaveChanges();
                 return RedirectToAction("Index");

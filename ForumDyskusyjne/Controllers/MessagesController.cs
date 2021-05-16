@@ -42,7 +42,11 @@ namespace ForumDyskusyjne.Controllers
         {
             Message msg = new Message();
             msg.AccountId = User.Identity.GetUserId();
-            int max = db.Messages.Max(a => a.Order);
+
+
+            int max = 0;
+            if (db.Messages.ToList().Count != 0)
+                 max = db.Messages.Max(a => a.Order);
             msg.Order = max + 1;
             msg.ThreadId=id;
          
@@ -58,9 +62,20 @@ namespace ForumDyskusyjne.Controllers
         {
             if (ModelState.IsValid)
             {
+
+
+
                 db.Messages.Add(message);
+
+
+                var idd = User.Identity.GetUserId();
+                var user = db.Users.FirstOrDefault(a => a.Id == idd);
+                user.msg = user.msg + 1;
+                db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
-                return Redirect("/Threads/Details/"+message.ThreadId);
+
+                db.SaveChanges();
+                return Redirect("/Threads/Details/"+message.ThreadId+"?Page=0");
             }
 
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);

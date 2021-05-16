@@ -50,7 +50,15 @@
             @Html.ActionLink("Edit", "Edit", new { id = item.ThreadId }) |
 
             @Html.ActionLink("Delete", "Delete", new { id = item.ThreadId }) |
-            @Html.ActionLink("Go To Thread", "Details", new { id = item.ThreadId }) 
+
+            @if (item.Glued == 0)
+            {
+                @Html.ActionLink("Pin", "Pin", new { id = item.ThreadId }) }
+            else
+            {
+                @Html.ActionLink("UnPin", "UnPin", new { id = item.ThreadId })
+            } |
+            @Html.ActionLink("Go To Thread", "Details", new { id = item.ThreadId, Page = 0 }, null)
 
         </td>
     </tr>
