@@ -15,9 +15,10 @@ namespace ForumDyskusyjne.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Threads
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var threads = db.Threads.Include(t => t.Forum);
+            var threads = db.Threads.Where(a=>a.ForumId==id);
+            ViewBag.ForumId = id;
             return View(threads.ToList());
         }
 
@@ -29,6 +30,7 @@ namespace ForumDyskusyjne.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Thread thread = db.Threads.Find(id);
+            ViewBag.Messages = db.Messages.Where(a => a.ThreadId==id).ToList();
             if (thread == null)
             {
                 return HttpNotFound();
@@ -37,12 +39,20 @@ namespace ForumDyskusyjne.Controllers
         }
 
         // GET: Threads/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
             ViewBag.ForumId = new SelectList(db.Forums, "ForumId", "Name");
-            return View();
-        }
 
+            Thread thr = new Thread();
+
+            int max = db.Threads.Max(a => a.Order);
+            thr.Order = max + 1;
+            thr.ForumId = id;
+            thr.Views = 0;
+            thr.Glued = 0;
+            return View(thr);
+
+        }
         // POST: Threads/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -54,7 +64,7 @@ namespace ForumDyskusyjne.Controllers
             {
                 db.Threads.Add(thread);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Redirect("/Threads/Index/" + thread.ForumId);
             }
 
             ViewBag.ForumId = new SelectList(db.Forums, "ForumId", "Name", thread.ForumId);

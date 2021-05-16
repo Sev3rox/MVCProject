@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ForumDyskusyjne.Models;
 
-namespace ForumDyskusyjne.Controllers
+namespace ForumDyskusyjne.Areas.Admin.Controllers
 {
     public class ForumCategoriesController : Controller
     {
@@ -28,12 +28,19 @@ namespace ForumDyskusyjne.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             ForumCategory forumCategory = db.ForumCategorys.Find(id);
+            ViewBag.Forums = db.Forums.Where(a => a.ForumCategoryId == id).ToList();
             if (forumCategory == null)
             {
                 return HttpNotFound();
             }
             return View(forumCategory);
         }
+
+
+          
+
+     
+            
 
         // GET: ForumCategories/Create
         public ActionResult Create()

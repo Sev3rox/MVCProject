@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", new { id = ViewBag.ForumId })
 </p>
 <table class="table">
     <tr>
@@ -47,9 +47,11 @@
             @Html.DisplayFor(modelItem => item.Glued)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ThreadId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ThreadId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ThreadId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.ThreadId }) |
+
+            @Html.ActionLink("Delete", "Delete", new { id = item.ThreadId }) |
+            @Html.ActionLink("Go To Thread", "Details", new { id = item.ThreadId }) 
+
         </td>
     </tr>
 }

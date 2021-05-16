@@ -44,6 +44,25 @@
 
     </dl>
 </div>
+
+
+@Html.ActionLink("Add Thread", "../Threads/Create/" + Model.ForumId)
+
+<table class="table">
+    @foreach (var item in ViewBag.Threads)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+
+
+
+        </tr>
+    }
+</table>
+
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ForumId }) |
     @Html.ActionLink("Back to List", "Index")

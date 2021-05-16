@@ -20,7 +20,23 @@
 
     </dl>
 </div>
+
+<table class="table">
+    @foreach (var item in ViewBag.Forums)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+
+            <td>
+                @Html.ActionLink("Go To Forum", "../Threads/Index", new { id = item.ForumId })
+            </td>
+
+        </tr>
+    }
+</table>
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ForumCategoryId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

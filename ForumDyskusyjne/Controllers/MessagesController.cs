@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ForumDyskusyjne.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ForumDyskusyjne.Controllers
 {
@@ -37,10 +38,15 @@ namespace ForumDyskusyjne.Controllers
         }
 
         // GET: Messages/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
-            ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name");
-            return View();
+            Message msg = new Message();
+            msg.AccountId = User.Identity.GetUserId();
+            int max = db.Messages.Max(a => a.Order);
+            msg.Order = max + 1;
+            msg.ThreadId=id;
+         
+            return View(msg);
         }
 
         // POST: Messages/Create
@@ -54,7 +60,7 @@ namespace ForumDyskusyjne.Controllers
             {
                 db.Messages.Add(message);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Redirect("/Threads/Details/"+message.ThreadId);
             }
 
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);

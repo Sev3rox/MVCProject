@@ -4,8 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
+
+<h2>@Html.ActionLink("Forums", "../Forums/Index")</h2>
+
+<h2>Categories</h2>
+<br />
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -17,17 +21,19 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ForumCategoryId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ForumCategoryId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ForumCategoryId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ForumCategoryId }) |
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.ForumCategoryId }) |
+                @Html.ActionLink("Forums in that Category", "Details", new { id = item.ForumCategoryId }) 
+            </td>
+        </tr>
+    }
 
 </table>

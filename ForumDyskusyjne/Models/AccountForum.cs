@@ -8,7 +8,7 @@ namespace ForumDyskusyjne.Models
     public class AccountForum
     {
         public int AccountForumId {get; set;}
-        public int AccountId {get; set;}
+        public string AccountId {get; set;}
         public int ForumId { get; set; }
 
         public virtual ApplicationUser User { get; set; }

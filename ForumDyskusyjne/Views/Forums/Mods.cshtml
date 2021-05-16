@@ -1,0 +1,55 @@
+﻿@model ForumDyskusyjne.Models.ApplicationUser
+@{
+    ViewBag.Title = "Mods";
+}
+
+<h2>Mods</h2>
+
+@ViewBag.Mods
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <div class="form-group">
+
+        @Html.DropDownList("ForumModsAdd", null, htmlAttributes: new { @class = "form-control", Name="Account" })
+    </div>
+
+    <input type="hidden" name="ForumId" value="@ViewBag.FId" />
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input name="btn" type="submit" value="Add" class="btn btn-default" />
+        </div>
+    </div>
+
+</div>
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+
+
+    <div class="form-group">
+        @Html.DropDownList("ForumModsDel", null, htmlAttributes: new { @class = "form-control", Name = "Account" })
+    </div>
+
+
+     <input type="hidden" name="ForumId" value="@ViewBag.FId" />
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input name="btn" type="submit" value="Del" class="btn btn-default" />
+        </div>
+    </div>
+
+</div>
+}

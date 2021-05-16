@@ -167,7 +167,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Moderator\ModeratorAreaRegistration.cs" />
+    <Compile Include="Areas\NotLogged\NotLoggedAreaRegistration.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminPanelController.cs" />
     <Compile Include="Controllers\AnnoucementsController.cs" />
     <Compile Include="Controllers\BannedWordsController.cs" />
     <Compile Include="Controllers\ForumCategoriesController.cs" />
@@ -183,6 +188,18 @@
     <Compile Include="Migrations\202104170756575_v1.cs" />
     <Compile Include="Migrations\202104170756575_v1.Designer.cs">
       <DependentUpon>202104170756575_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105081545379_v2.cs" />
+    <Compile Include="Migrations\202105081545379_v2.Designer.cs">
+      <DependentUpon>202105081545379_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105091756111_v3.cs" />
+    <Compile Include="Migrations\202105091756111_v3.Designer.cs">
+      <DependentUpon>202105091756111_v3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105091758132_v4.cs" />
+    <Compile Include="Migrations\202105091758132_v4.Designer.cs">
+      <DependentUpon>202105091758132_v4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountForum.cs" />
@@ -214,6 +231,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\User\Views\web.config" />
+    <Content Include="Areas\Moderator\Views\web.config" />
+    <Content Include="Areas\NotLogged\Views\web.config" />
+    <Content Include="Areas\Moderator\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\NotLogged\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\User\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -233,7 +257,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -294,10 +318,23 @@
     <Content Include="Views\Threads\Details.cshtml" />
     <Content Include="Views\Threads\Edit.cshtml" />
     <Content Include="Views\Threads\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\AdminPanel\Index.cshtml" />
+    <Content Include="Views\AdminPanel\Comments.cshtml" />
+    <Content Include="Views\Forums\Mods.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104170756575_v1.resx">
       <DependentUpon>202104170756575_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105081545379_v2.resx">
+      <DependentUpon>202105081545379_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105091756111_v3.resx">
+      <DependentUpon>202105091756111_v3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105091758132_v4.resx">
+      <DependentUpon>202105091758132_v4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -312,6 +349,22 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Default\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Moderator\Controllers\" />
+    <Folder Include="Areas\Moderator\Data\" />
+    <Folder Include="Areas\Moderator\Views\Shared\" />
+    <Folder Include="Areas\NotLogged\Controllers\" />
+    <Folder Include="Areas\NotLogged\Data\" />
+    <Folder Include="Areas\NotLogged\Views\Shared\" />
+    <Folder Include="Areas\User\Controllers\" />
+    <Folder Include="Areas\User\Data\" />
+    <Folder Include="Areas\User\Views\Shared\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

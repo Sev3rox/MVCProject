@@ -17,10 +17,90 @@ namespace ForumDyskusyjne.Controllers
         // GET: Forums
         public ActionResult Index()
         {
+            //IdentityManager im = new IdentityManager();
+            //im.CreateRole("Admin");
+            //im.CreateRole("User");
+            //im.CreateRole("Mod");
+            //im.CreateRole("Banned");
+            //im.CreateRole("BlockedMsg");
+      
+
             var forums = db.Forums.Include(f => f.ForumCategory);
             return View(forums.ToList());
         }
 
+        public ActionResult Mods(int id)
+        {
+            string mods = "";
+            var added = db.Users.Where(a => a.AccountForums.Any(b => b.ForumId == id)).ToList();
+            var all = db.Users.ToList();
+          foreach(var x in all)
+            {
+                x.AccountForums.Add(db.AccountForums.FirstOrDefault(a => a.AccountId == x.Id));
+            }
+
+            foreach (var x in all)
+            {
+                foreach (var y in x.AccountForums)
+                {
+                    if(y!=null)
+                    if (y.ForumId == id)
+                        added.Add(db.Users.FirstOrDefault(a=>a.Id==y.AccountId));
+            }
+            }
+
+
+            foreach (ApplicationUser x in added)
+            {
+                if (all.Contains(x))
+                {
+                    all.Remove(x);
+                    mods += x.UserName + ", ";
+                }
+            }
+            ViewBag.FId = id;
+            ViewBag.mods = mods;
+            ViewBag.ForumModsAdd = new SelectList(all, "UserName", "UserName");
+            ViewBag.ForumModsDel = new SelectList(added, "UserName", "UserName");
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Mods(int ForumId, string btn, string Account)
+        {
+            var idd = db.Users.FirstOrDefault(a => a.UserName == Account);
+            var id = idd.Id;
+            switch (btn)
+            {
+
+                case "Add":
+                    {
+                       
+                        var fa = new AccountForum
+                        {
+                            AccountId = id,
+                            ForumId = ForumId
+                        };
+
+
+
+                        db.AccountForums.Add(fa);
+                        db.SaveChanges();
+                        break;
+                    }
+                case "Del":
+                    {
+
+                        var fa = db.AccountForums.FirstOrDefault(a => a.ForumId == ForumId && a.AccountId == id);
+                             db.AccountForums.Remove(fa);
+                        db.SaveChanges();
+                        break;
+                    }
+              
+            }
+                    return RedirectToAction("Mods", new { id = ForumId });
+        }
         // GET: Forums/Details/5
         public ActionResult Details(int? id)
         {
@@ -29,6 +109,7 @@ namespace ForumDyskusyjne.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Forum forum = db.Forums.Find(id);
+            ViewBag.Threads = db.Threads.Where(a => a.ForumId == id).ToList();
             if (forum == null)
             {
                 return HttpNotFound();

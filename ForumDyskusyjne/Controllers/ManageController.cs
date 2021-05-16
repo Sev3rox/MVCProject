@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ForumDyskusyjne.Models;
+using Microsoft.Owin.Security.Cookies;
 
 namespace ForumDyskusyjne.Controllers
 {
@@ -18,6 +19,8 @@ namespace ForumDyskusyjne.Controllers
 
         public ManageController()
         {
+           
+            
         }
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)

@@ -12,7 +12,7 @@ namespace ForumDyskusyjne.Models
         public int Order { get; set; }
         public int ThreadId { get; set; }
         public virtual Thread Thread{ get; set; }
-        public int AccountId { get; set; }
+        public string AccountId { get; set; }
         public virtual ApplicationUser User { get; set; }
 
     }
