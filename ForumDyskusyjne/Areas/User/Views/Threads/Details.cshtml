@@ -1,0 +1,93 @@
+﻿@model ForumDyskusyjne.Models.Thread
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Thread</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Forum.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Forum.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Views)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Views)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Glued)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Glued)
+        </dd>
+
+    </dl>
+</div>
+@Html.ActionLink("Comment", "../Messages/Create/" + Model.ThreadId)
+
+<table class="table">
+    @foreach (var item in ViewBag.Messages)
+    {
+    <tr>
+        <td>
+            @item.Content
+        </td>
+        <td>
+            @item.User.UserName
+        </td>
+
+
+
+    </tr>
+    }
+</table>
+
+</br>
+</br>
+
+
+@if (ViewBag.Page > 0)
+{
+
+    @Html.ActionLink("Prev", "Details", new { id = Model.ThreadId, Page = ViewBag.Page - 1 }, null);
+}
+
+@if (ViewBag.Page < ViewBag.MaxPage)
+{
+    
+    @Html.ActionLink("Next", "Details", new { id = Model.ThreadId, Page = ViewBag.Page + 1 }, null);
+}
+
+<p>
+   
+    @Html.ActionLink("Back to List", "Index")
+</p>

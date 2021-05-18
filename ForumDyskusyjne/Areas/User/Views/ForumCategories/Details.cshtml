@@ -1,0 +1,42 @@
+﻿@model ForumDyskusyjne.Models.ForumCategory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ForumCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+
+<table class="table">
+    @foreach (var item in ViewBag.Forums)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+
+            <td>
+                @Html.ActionLink("Go To Forum", "../Threads/Index", new { id = item.ForumId })
+            </td>
+
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

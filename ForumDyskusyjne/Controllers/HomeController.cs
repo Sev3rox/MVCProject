@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -10,9 +11,22 @@ namespace ForumDyskusyjne.Controllers
     {
         public ActionResult Index()
         {
+            if (User.IsInRole("Banned"))
+            {
+
+                var AuthenticationManager = HttpContext.GetOwinContext().Authentication;
+                AuthenticationManager.SignOut();
+                return RedirectToAction("Ban");
+            }
+
             return View();
         }
 
+
+        public ActionResult Ban()
+        {
+            return View("../Banned");
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

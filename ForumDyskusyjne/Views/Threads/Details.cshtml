@@ -52,19 +52,22 @@
 
     </dl>
 </div>
-@Html.ActionLink("Comment", "../Messages/Create/" + Model.ThreadId)
+
 
 <table class="table">
     @foreach (var item in ViewBag.Messages)
     {
-        <tr>
-            <td>
-                @item.Content
-            </td>
+    <tr>
+        <td>
+            @item.Content
+        </td>
+        <td>
+            @item.User.UserName
+        </td>
 
 
 
-        </tr>
+    </tr>
     }
 </table>
 
@@ -85,6 +88,5 @@
 }
 
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ThreadId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

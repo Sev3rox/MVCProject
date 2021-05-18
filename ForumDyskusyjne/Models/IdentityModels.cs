@@ -20,7 +20,9 @@ namespace ForumDyskusyjne.Models
 
                            //tu moze cos dodac idk co jest basicowo
 		public int msg { get; set; }
-        public byte[] Image { get; set; }
+
+		public int onpage { get; set; }
+		public byte[] Image { get; set; }
 		public Rank Rank { get; set; }
 		public virtual ICollection<Message> Messages { get; set; }
         public virtual ICollection<PrivateMessage> PrivateMessagesSend { get; set; }
@@ -103,6 +105,9 @@ namespace ForumDyskusyjne.Models
 
 			return rm.RoleExists(name);
 		}
+
+
+	
 
 
 		public bool CreateRole(string name)

@@ -223,3 +223,4 @@ C:\Users\PC\Desktop\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrati
 C:\Users\PC\Desktop\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v4.resources
 C:\Users\PC\Desktop\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v5.resources
 C:\Users\PC\Desktop\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v6.resources
+C:\Users\PC\Desktop\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v7.resources

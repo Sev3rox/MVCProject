@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Forum Romanum</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,15 +18,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+               
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Forums", "../Forums/Index")</li>
-                    <li>@Html.ActionLink("Panel", "../AdminPanel/Index")</li>
+
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        @Html.ActionLink("Forum Romanum", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        <li>@Html.ActionLink("Forums", "../Forums/Index", new { area = "Admin" })</li>
+                        <li>@Html.ActionLink("AdminPanel", "../AdminPanel/Index", new { area = "Admin" })</li>
+                        //area admin
+                    }
+                    else if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Forum Romanum", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        <li>@Html.ActionLink("Forums", "../Forums/Index", new { area = "User" }))</li>
+                        //////area user
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Forum Romanum", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        <li>@Html.ActionLink("Forums", "../Forums/Index")</li>
+                        //basic
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

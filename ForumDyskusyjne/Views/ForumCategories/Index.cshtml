@@ -10,9 +10,7 @@
 
 <h2>Categories</h2>
 <br />
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -28,9 +26,7 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ForumCategoryId }) |
-
-                @Html.ActionLink("Delete", "Delete", new { id = item.ForumCategoryId }) |
+                
                 @Html.ActionLink("Forums in that Category", "Details", new { id = item.ForumCategoryId }) 
             </td>
         </tr>

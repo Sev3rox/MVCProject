@@ -5,8 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ForumDyskusyjne.Controllers
+namespace ForumDyskusyjne.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminPanelController : Controller
     {
 

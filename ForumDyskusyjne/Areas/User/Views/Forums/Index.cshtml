@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ForumDyskusyjne.Models.Forum>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Forums</h2>
+<h2>@Html.ActionLink("Categories", "../ForumCategories/Index")</h2>
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ForumCategory.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Permission)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ForumCategory.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Permission)
+        </td>
+        <td>
+           
+            @Html.ActionLink("Go To Forum", "../Threads/Index", new { id = item.ForumId })
+
+        </td>
+    </tr>
+}
+
+</table>

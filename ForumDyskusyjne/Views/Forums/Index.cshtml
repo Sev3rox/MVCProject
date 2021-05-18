@@ -7,9 +7,6 @@
 <h2>Forums</h2>
 <h2>@Html.ActionLink("Categories", "../ForumCategories/Index")</h2>
 <br />
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -42,10 +39,7 @@
             @Html.DisplayFor(modelItem => item.Permission)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ForumId }) |
-
-            @Html.ActionLink("Delete", "Delete", new { id = item.ForumId }) |
-            @Html.ActionLink("Mods", "Mods", new { id = item.ForumId }) |
+          
             @Html.ActionLink("Go To Forum", "../Threads/Index", new { id = item.ForumId })
 
         </td>

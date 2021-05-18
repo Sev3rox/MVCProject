@@ -1,22 +1,22 @@
 ﻿using System.Web.Mvc;
 
-namespace ForumDyskusyjne.Areas.NotLogged
+namespace ForumDyskusyjne.Areas.BlockedMsg
 {
-    public class NotLoggedAreaRegistration : AreaRegistration 
+    public class BlockedMsgAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "NotLogged";
+                return "BlockedMsg";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "NotLogged_default",
-                "NotLogged/{controller}/{action}/{id}",
+                "BlockedMsg_default",
+                "BlockedMsg/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }

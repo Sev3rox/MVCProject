@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ForumDyskusyjne.Models.Thread>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = ViewBag.ForumId })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Forum.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Views)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Glued)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Forum.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Views)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Glued)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ThreadId }) |
+
+            @Html.ActionLink("Delete", "Delete", new { id = item.ThreadId }) |
+
+            @if (item.Glued == 0)
+            {
+                @Html.ActionLink("Pin", "Pin", new { id = item.ThreadId }) }
+            else
+            {
+                @Html.ActionLink("UnPin", "UnPin", new { id = item.ThreadId })
+            } |
+            @Html.ActionLink("Go To Thread", "Details", new { id = item.ThreadId, Page = 0 }, null)
+
+        </td>
+    </tr>
+}
+
+</table>
