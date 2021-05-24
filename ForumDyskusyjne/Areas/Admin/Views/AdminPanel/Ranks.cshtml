@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Ranks";
+}
+
+<h2>Ranks</h2>
+
+Name: @ViewBag.User.UserName
+<br />
+Messages: @ViewBag.User.msg
+<br />
+<img src="@ViewBag.Image" />
+<br />
+@using (Html.BeginForm())
+{
+
+    <input type="submit" name="submitButton" value="-10" />
+    <input type="submit" name="submitButton" value="+10" />
+}
+<br />
+@Html.ActionLink("Back", "Index")

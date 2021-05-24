@@ -14,6 +14,8 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class MessagesController : Controller
     {
+
+        static int pomid;
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Messages
@@ -84,19 +86,33 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
         }
 
         // GET: Messages/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? id, int id2)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Message message = db.Messages.Find(id);
-            if (message == null)
+            if (id2 != 0)
             {
-                return HttpNotFound();
+                Message message = db.Messages.Find(id);
+                if (message == null)
+                {
+                    return HttpNotFound();
+                }
+                ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);
+                pomid = id2;
+                return View(message);
             }
-            ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);
-            return View(message);
+            else
+            {
+                Message message = db.Messages.Find(id);
+                if (message == null)
+                {
+                    return HttpNotFound();
+                }
+                ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);
+                return View(message);
+            }
         }
 
         // POST: Messages/Edit/5
@@ -110,7 +126,8 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             {
                 db.Entry(message).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+           
+                return RedirectToAction("../Threads/Details", new { id = pomid, Page = 0 });
             }
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);
             return View(message);

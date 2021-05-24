@@ -23,7 +23,7 @@ namespace ForumDyskusyjne.Areas.User.Controllers
             Forum forum = db.Forums.Find(id);
             if (forum.Permission == 1)
             {
-                return RedirectToAction("IndexA", id);
+                return RedirectToAction("IndexA", new { id = id });
             }
             var threads = db.Threads.Where(a => a.ForumId == id).OrderByDescending(a=>a.Glued).ThenBy(a=>a.Order);
             ViewBag.ForumId = id;
@@ -86,7 +86,7 @@ namespace ForumDyskusyjne.Areas.User.Controllers
             int PageSize = 5;
             IdentityManager im = new IdentityManager();
             var user = im.GetUserByID(User.Identity.GetUserId());
-            if (user.onpage != 0)
+            if (user.onpage > 0)
             {
                 PageSize = user.onpage;
             }
@@ -154,63 +154,8 @@ namespace ForumDyskusyjne.Areas.User.Controllers
         }
 
         // GET: Threads/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Thread thread = db.Threads.Find(id);
-            if (thread == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.ForumId = new SelectList(db.Forums, "ForumId", "Name", thread.ForumId);
-            return View(thread);
-        }
-
-        // POST: Threads/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ThreadId,Name,Order,Views,Glued,ForumId")] Thread thread)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(thread).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            ViewBag.ForumId = new SelectList(db.Forums, "ForumId", "Name", thread.ForumId);
-            return View(thread);
-        }
-
-        // GET: Threads/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Thread thread = db.Threads.Find(id);
-            if (thread == null)
-            {
-                return HttpNotFound();
-            }
-            return View(thread);
-        }
-
-        // POST: Threads/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Thread thread = db.Threads.Find(id);
-            db.Threads.Remove(thread);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        
+        
 
         protected override void Dispose(bool disposing)
         {

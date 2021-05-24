@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ForumDyskusyjne.Models;
 using Microsoft.Owin.Security.Cookies;
+using System.Data.Entity;
 
 namespace ForumDyskusyjne.Areas.User.Controllers
 {
@@ -17,12 +18,33 @@ namespace ForumDyskusyjne.Areas.User.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        private ApplicationDbContext db = new ApplicationDbContext();
         public ManageController()
         {
            
             
         }
+        public int returnimg(int x)
+        {
+            if (x >= 1000)
+                return 1000;
+            if (x >= 500)
+                return 500;
+            if (x >= 100)
+                return 100;
+            if (x >= 50)
+                return 50;
+            if (x >= 10)
+                return 10;
+            if (x >= 5)
+                return 5;
+            if (x >= 1)
+                return 1;
 
+            return 0;
+
+
+        }
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
@@ -66,6 +88,7 @@ namespace ForumDyskusyjne.Areas.User.Controllers
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
 
+
             var userId = User.Identity.GetUserId();
             var model = new IndexViewModel
             {
@@ -75,8 +98,25 @@ namespace ForumDyskusyjne.Areas.User.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
+
+            var userr = db.Users.Find(userId);
+            ViewBag.UserPage = userr.onpage;
+            var x = returnimg(userr.msg);
+            ViewBag.Image = db.Ranks.FirstOrDefault(a => a.Name == x.ToString()).Image;
             return View(model);
         }
+
+        [HttpPost]
+        public async Task<ActionResult> Index(int? UserPage)
+        {
+            var userId = User.Identity.GetUserId();
+            var userr = db.Users.Find(userId);
+            userr.onpage = (int)UserPage;
+            db.Entry(userr).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
         //
         // POST: /Manage/RemoveLogin
@@ -330,13 +370,15 @@ namespace ForumDyskusyjne.Areas.User.Controllers
             if (disposing && _userManager != null)
             {
                 _userManager.Dispose();
+                db.Dispose();
                 _userManager = null;
             }
 
             base.Dispose(disposing);
         }
 
-#region Helpers
+     
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 

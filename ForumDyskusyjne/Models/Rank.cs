@@ -9,7 +9,7 @@ namespace ForumDyskusyjne.Models
     {
         public int RankId { get; set; }
         public string Name { get; set; }
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
         public virtual ICollection<ApplicationUser> Users { get; set; }
     }
 }

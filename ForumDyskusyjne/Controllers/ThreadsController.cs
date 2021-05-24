@@ -21,7 +21,7 @@ namespace ForumDyskusyjne.Controllers
             Forum forum = db.Forums.Find(id);
             if (forum.Permission == 1)
             {
-                return RedirectToAction("IndexA", id);
+                return RedirectToAction("IndexA", new { id = id });
             }
             var threads = db.Threads.Where(a => a.ForumId == id).OrderByDescending(a=>a.Glued).ThenBy(a=>a.Order);
             ViewBag.ForumId = id;

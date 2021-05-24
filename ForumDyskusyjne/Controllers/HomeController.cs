@@ -11,7 +11,7 @@ namespace ForumDyskusyjne.Controllers
     {
         public ActionResult Index()
         {
-            if (User.IsInRole("Banned"))
+            if (User.IsInRole("Banned")&&!User.IsInRole("Admin"))
             {
 
                 var AuthenticationManager = HttpContext.GetOwinContext().Authentication;

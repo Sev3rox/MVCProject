@@ -181,6 +181,7 @@
     <Compile Include="Areas\BlockedMsg\Controllers\ThreadsController.cs" />
     <Compile Include="Areas\Moderator\Controllers\AccountController.cs" />
     <Compile Include="Areas\Moderator\Controllers\ManageController.cs" />
+    <Compile Include="Areas\Moderator\Controllers\MessagesController.cs" />
     <Compile Include="Areas\Moderator\Controllers\ThreadsController.cs" />
     <Compile Include="Areas\Moderator\ModeratorAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\AccountController.cs" />
@@ -232,6 +233,14 @@
     <Compile Include="Migrations\202105171637253_v7.Designer.cs">
       <DependentUpon>202105171637253_v7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105231838422_v8.cs" />
+    <Compile Include="Migrations\202105231838422_v8.Designer.cs">
+      <DependentUpon>202105231838422_v8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105241229452_v9.cs" />
+    <Compile Include="Migrations\202105241229452_v9.Designer.cs">
+      <DependentUpon>202105241229452_v9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountForum.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -257,6 +266,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\0.png" />
+    <Content Include="Content\Images\1.png" />
+    <Content Include="Content\Images\10.png" />
+    <Content Include="Content\Images\100.png" />
+    <Content Include="Content\Images\1000.png" />
+    <Content Include="Content\Images\5.png" />
+    <Content Include="Content\Images\50.png" />
+    <Content Include="Content\Images\500.png" />
+    <Content Include="Content\Images\Img.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -305,15 +323,10 @@
     <Content Include="Areas\Admin\Views\Account\VerifyCode.cshtml" />
     <Content Include="Areas\User\Views\Forums\Index.cshtml" />
     <Content Include="Areas\User\Views\Threads\Create.cshtml" />
-    <Content Include="Areas\User\Views\Threads\Delete.cshtml" />
     <Content Include="Areas\User\Views\Threads\Details.cshtml" />
-    <Content Include="Areas\User\Views\Threads\Edit.cshtml" />
     <Content Include="Areas\User\Views\Threads\Index.cshtml" />
     <Content Include="Areas\User\Views\Messages\Create.cshtml" />
-    <Content Include="Areas\User\Views\Messages\Delete.cshtml" />
     <Content Include="Areas\User\Views\Messages\Details.cshtml" />
-    <Content Include="Areas\User\Views\Messages\Edit.cshtml" />
-    <Content Include="Areas\User\Views\Messages\Index.cshtml" />
     <Content Include="Areas\User\Views\ForumCategories\Details.cshtml" />
     <Content Include="Areas\User\Views\ForumCategories\Index.cshtml" />
     <Content Include="Areas\User\Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -384,10 +397,13 @@
     <Content Include="Areas\BlockedMsg\Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Areas\BlockedMsg\Views\_ViewStart.cshtml" />
     <Content Include="Areas\BlockedMsg\Views\Threads\Create.cshtml" />
-    <Content Include="Areas\BlockedMsg\Views\Threads\Delete.cshtml" />
     <Content Include="Areas\BlockedMsg\Views\Threads\Details.cshtml" />
-    <Content Include="Areas\BlockedMsg\Views\Threads\Edit.cshtml" />
     <Content Include="Areas\BlockedMsg\Views\Threads\Index.cshtml" />
+    <Content Include="Areas\Moderator\Views\Messages\Create.cshtml" />
+    <Content Include="Areas\Moderator\Views\Messages\Delete.cshtml" />
+    <Content Include="Areas\Moderator\Views\Messages\Details.cshtml" />
+    <Content Include="Areas\Moderator\Views\Messages\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminPanel\Ranks.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -447,10 +463,7 @@
     <Content Include="Views\ForumCategories\Details.cshtml" />
     <Content Include="Views\ForumCategories\Index.cshtml" />
     <Content Include="Views\Messages\Create.cshtml" />
-    <Content Include="Views\Messages\Delete.cshtml" />
     <Content Include="Views\Messages\Details.cshtml" />
-    <Content Include="Views\Messages\Edit.cshtml" />
-    <Content Include="Views\Messages\Index.cshtml" />
     <Content Include="Views\PrivateMessages\Create.cshtml" />
     <Content Include="Views\PrivateMessages\Delete.cshtml" />
     <Content Include="Views\PrivateMessages\Details.cshtml" />
@@ -488,6 +501,12 @@
     <EmbeddedResource Include="Migrations\202105171637253_v7.resx">
       <DependentUpon>202105171637253_v7.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105231838422_v8.resx">
+      <DependentUpon>202105231838422_v8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105241229452_v9.resx">
+      <DependentUpon>202105241229452_v9.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -503,7 +522,6 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Default\" />
     <Folder Include="Areas\Admin\Views\Shared\" />

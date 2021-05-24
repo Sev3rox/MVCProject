@@ -106,7 +106,7 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
         }
 
         // GET: ForumCategories/Delete/5
-        public ActionResult Delete(int? id)
+     /*  public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -130,7 +130,7 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+     */
         protected override void Dispose(bool disposing)
         {
             if (disposing)

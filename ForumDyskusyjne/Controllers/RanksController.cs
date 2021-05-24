@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -50,6 +51,7 @@ namespace ForumDyskusyjne.Controllers
         {
             if (ModelState.IsValid)
             {
+                rank.Image= "/Content/Images/"+rank.Name+".png";
                 db.Ranks.Add(rank);
                 db.SaveChanges();
                 return RedirectToAction("Index");

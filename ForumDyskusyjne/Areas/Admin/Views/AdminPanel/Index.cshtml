@@ -34,9 +34,32 @@
             </td>
 
             <td>
-                @Html.ActionLink("Ban", "Ban", new { id = item.Id }) |
-                @Html.ActionLink("Mod", "Mod", new { id = item.Id }) |
-                @Html.ActionLink("BlockMsg", "BlockMsg", new { id = item.Id }) 
+                @if (item.Roles.FirstOrDefault(a => a.RoleId == ViewBag.Banned) != null)
+                {
+                    @Html.ActionLink("UnBan", "UnBan", new { id = item.Id })
+                }
+                else
+                {
+                    @Html.ActionLink("Ban", "Ban", new { id = item.Id })
+                }|
+                @if (item.Roles.FirstOrDefault(a => a.RoleId == ViewBag.Mod) != null)
+                {
+                    @Html.ActionLink("UnMod", "UnMod", new { id = item.Id })
+                }
+                else
+                {
+                    @Html.ActionLink("Mod", "Mod", new { id = item.Id })
+                }|
+                @if (item.Roles.FirstOrDefault(a => a.RoleId == ViewBag.BlockedMsg) != null)
+                {
+                    @Html.ActionLink("UnBlockMsg", "UnBlockMsg", new { id = item.Id })
+                }
+                else
+                {
+                    @Html.ActionLink("BlockMsg", "BlockMsg", new { id = item.Id })
+                } |
+                @Html.ActionLink("Ranks", "Ranks", new { id = item.Id })
+
 
             </td>
         </tr>

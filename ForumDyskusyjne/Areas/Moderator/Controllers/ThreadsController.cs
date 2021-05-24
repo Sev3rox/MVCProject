@@ -11,7 +11,7 @@ using Microsoft.AspNet.Identity;
 
 namespace ForumDyskusyjne.Areas.Moderator.Controllers
 {
-    [Authorize(Roles = "Moderator")]
+    [Authorize(Roles = "Mod")]
     public class ThreadsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -23,7 +23,7 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
             Forum forum = db.Forums.Find(id);
             if (forum.Permission == 1)
             {
-                return RedirectToAction("IndexA", id);
+                return RedirectToAction("IndexA", new { id = id });
             }
             var threads = db.Threads.Where(a => a.ForumId == id).OrderByDescending(a=>a.Glued).ThenBy(a=>a.Order);
             ViewBag.ForumId = id;
@@ -69,7 +69,7 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
             int PageSize = 5; 
             IdentityManager im = new IdentityManager();
             var user = im.GetUserByID(User.Identity.GetUserId());
-            if (user.onpage != 0)
+            if (user.onpage > 0)
             {
                 PageSize = user.onpage;
             }
@@ -199,6 +199,12 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
             db.Threads.Remove(thread);
             db.SaveChanges();
             return RedirectToAction("/Index/" + idd);
+        }
+
+        public ActionResult EditMsg(int id, int id2)
+        {
+
+            return RedirectToAction("../Messages/Edit", new { id = id, id2 = id2 });
         }
 
         protected override void Dispose(bool disposing)

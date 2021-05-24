@@ -102,7 +102,7 @@ namespace ForumDyskusyjne.Models
 		public bool RoleExists(string name)
 		{
 			var rm = LocalRoleManager;
-
+		
 			return rm.RoleExists(name);
 		}
 
@@ -160,6 +160,13 @@ namespace ForumDyskusyjne.Models
 			{
 				um.RemoveFromRole(userId, role.RoleId);
 			}
+		}
+
+		public void UserRoleRemove(string userId, string name)
+        {
+			var um = LocalUserManager;
+			var user = um.FindById(userId);
+			um.RemoveFromRoleAsync(userId, name);
 		}
 	}
 }

@@ -23,7 +23,7 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             Forum forum = db.Forums.Find(id);
             if (forum.Permission == 1)
             {
-                return RedirectToAction("IndexA", id);
+                return RedirectToAction("IndexA", new { id = id });
             }
             var threads = db.Threads.Where(a => a.ForumId == id).OrderByDescending(a=>a.Glued).ThenBy(a=>a.Order);
             ViewBag.ForumId = id;
@@ -88,7 +88,7 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             int PageSize = 5; 
             IdentityManager im = new IdentityManager();
             var user = im.GetUserByID(User.Identity.GetUserId());
-            if (user.onpage != 0)
+            if (user.onpage > 0)
             {
                 PageSize = user.onpage;
             }
@@ -219,6 +219,15 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("/Index/" + idd);
         }
+
+
+         public ActionResult EditMsg(int id, int id2)
+        {
+
+            return RedirectToAction("../Messages/Edit", new { id = id, id2=id2 });
+        }
+       
+      
 
         protected override void Dispose(bool disposing)
         {
