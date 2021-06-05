@@ -29,12 +29,15 @@
                         @Html.ActionLink("Forum Romanum", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                         <li>@Html.ActionLink("Forums", "../Forums/Index", new { area = "Admin" })</li>
                         <li>@Html.ActionLink("AdminPanel", "../AdminPanel/Index", new { area = "Admin" })</li>
+                        <li>@Html.ActionLink("PM", "../PrivateMessages/Index", new { area = "Admin" })</li>
+                        <li>@Html.ActionLink("PM", "../Annoucements/Index", new { area = "Admin" })</li>
                         //area admin
                     }
                     else if (User.Identity.IsAuthenticated)
                     {
                         @Html.ActionLink("Forum Romanum", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                         <li>@Html.ActionLink("Forums", "../Forums/Index", new { area = "User" }))</li>
+                        <li>@Html.ActionLink("PM", "../PrivateMessages/Index", new { area = "User" })</li>
                         //////area user
                     }
                     else

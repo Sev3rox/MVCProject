@@ -102,5 +102,10 @@
         </table>
     </form>
 
-    <img src="@ViewBag.Image"/>
+    <img src="@ViewBag.Image" />
+    <img src="@ViewBag.Img" />
+    <form action="Manage/Image" method="post" enctype="multipart/form-data">
+        <input type="file" id="img" name="img" accept="image/*">
+        <input type="submit">
+    </form>
 </div>

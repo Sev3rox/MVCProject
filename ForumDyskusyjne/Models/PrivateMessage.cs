@@ -15,6 +15,5 @@ namespace ForumDyskusyjne.Models
         public virtual ApplicationUser Sender { get; set; }
         public string ReceiverId { get; set; }
         public virtual ApplicationUser Receiver { get; set; }
-        public byte[] Attachment { get; set; }
     }
 }

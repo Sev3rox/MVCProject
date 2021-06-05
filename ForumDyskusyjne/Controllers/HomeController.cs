@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForumDyskusyjne.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,8 +10,10 @@ namespace ForumDyskusyjne.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
+            ViewBag.Registered = db.Users.Count();
             if (User.IsInRole("Banned")&&!User.IsInRole("Admin"))
             {
 
@@ -19,7 +22,7 @@ namespace ForumDyskusyjne.Controllers
                 return RedirectToAction("Ban");
             }
 
-            return View();
+            return View(db.Annoucements.ToList());
         }
 
 

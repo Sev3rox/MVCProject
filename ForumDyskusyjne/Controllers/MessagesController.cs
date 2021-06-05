@@ -56,10 +56,12 @@ namespace ForumDyskusyjne.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MessageId,Content,Order,ThreadId,AccountId")] Message message)
         {
+            foreach (BannedWord w in db.BannedWords)
+            {
+                if (message.Content.ToLower().Contains(w.Word.ToLower())) ModelState.AddModelError("", "Użyto zakazane słowo " + w.Word);
+            }
             if (ModelState.IsValid)
             {
-
-
 
                 db.Messages.Add(message);
 
@@ -71,7 +73,8 @@ namespace ForumDyskusyjne.Controllers
                 db.SaveChanges();
 
                 db.SaveChanges();
-                return Redirect("/Threads/Details/"+message.ThreadId+"?Page=0");
+                return Redirect("/Threads/Details/" + message.ThreadId + "?Page=0");
+
             }
 
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);

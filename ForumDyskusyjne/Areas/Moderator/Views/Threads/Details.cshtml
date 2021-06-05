@@ -5,7 +5,8 @@
 }
 
 <h2>Details</h2>
-
+Liczba odpowiedzi: @ViewBag.Messagess
+Liczba odsłon: @ViewBag.Views
 <div>
     <h4>Thread</h4>
     <hr />
@@ -58,11 +59,11 @@
     @foreach (var item in ViewBag.Messages)
     {
         <tr>
-            <td>
-               @item.Content
+            <td id="temp">
+                @(new HtmlString(item.Content.ToString()))
             </td>
             <td>
-               @item.User.UserName
+                @item.User.UserName
             </td>
 
             <td>
@@ -89,8 +90,12 @@
 
 @if (ViewBag.Page < ViewBag.MaxPage)
 {
-    
+
     @Html.ActionLink("Next", "Details", new { id = Model.ThreadId, Page = ViewBag.Page + 1 }, null);
 }
-
+<form method="get">
+    <input name="Page" type="number" value="@ViewBag.Page" hidden>
+<textarea name="Search" cols="40" rows="5"></textarea>
+    <input type="Submit" value="test" />
+</form>
 

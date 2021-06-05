@@ -9,6 +9,9 @@ using Microsoft.Owin.Security;
 using ForumDyskusyjne.Models;
 using Microsoft.Owin.Security.Cookies;
 using System.Data.Entity;
+using System.IO;
+using System.Drawing;
+using System.Net;
 
 namespace ForumDyskusyjne.Controllers
 {
@@ -107,7 +110,9 @@ namespace ForumDyskusyjne.Controllers
 
             var x = returnimg(userr.msg);
             ViewBag.Image = db.Ranks.FirstOrDefault(a => a.Name == x.ToString()).Image;
-
+            string imreBase64Data = Convert.ToBase64String(userr.Image);
+            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
+            ViewBag.Img = imgDataURL;
 
             return View(model);
         }
@@ -121,6 +126,38 @@ namespace ForumDyskusyjne.Controllers
             db.Entry(userr).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<ActionResult> Image()
+        {
+
+            var userId = User.Identity.GetUserId();
+            var userr = db.Users.Find(userId);
+
+            HttpPostedFileBase file = Request.Files["img"];
+            BinaryReader reader = new BinaryReader(file.InputStream);
+            byte[] img = reader.ReadBytes((int)file.ContentLength);
+            if (img.Length > 1024 * 1024 * 20)
+            {
+                return RedirectToAction("Index", "Manage");
+                //ModelState.AddModelError("", "Zły obrazek");
+            }
+            string imreBase64Data = Convert.ToBase64String(img);
+            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
+            MemoryStream imageStream = new MemoryStream(img);
+            Bitmap image = new Bitmap(imageStream);
+            int width = image.Width;
+            int height = image.Height;
+            if (width > 200 || height > 200)
+            {
+                return RedirectToAction("Index", "Manage");
+                //ModelState.AddModelError("", "Zły obrazek");
+            }
+            userr.Image = img;
+            db.Entry(userr).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index", "Manage");
         }
         //
         // POST: /Manage/RemoveLogin

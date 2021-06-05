@@ -6,7 +6,8 @@
 
 <h2>Index</h2>
 
-
+Liczba wątków na forum: @ViewBag.Threads
+Liczba wiadomości na forum: @ViewBag.Messages
 <table class="table">
     <tr>
         <th>
@@ -20,21 +21,22 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Forum.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-    
-        <td>
-        
-            @Html.ActionLink("Go To Thread", "Details", new { id = item.ThreadId, Page = 0 }, null)
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Forum.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
 
-        </td>
-    </tr>
-}
+            <td>
+
+                @Html.ActionLink("Go To Thread", "Details", new { id = item.ThreadId, Page = 0 }, null)
+
+            </td>
+        </tr>
+    }
 
 </table>

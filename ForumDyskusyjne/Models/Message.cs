@@ -16,6 +16,7 @@ namespace ForumDyskusyjne.Models
         public virtual Thread Thread{ get; set; }
         public string AccountId { get; set; }
         public virtual ApplicationUser User { get; set; }
+        public byte[] Attachment { get; set; }
 
     }
 }

@@ -1,0 +1,42 @@
+﻿@model ForumDyskusyjne.Models.PrivateMessage
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PrivateMessage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SenderId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SenderId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiverId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiverId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PrivateMessageId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

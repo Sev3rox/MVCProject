@@ -1,79 +1,94 @@
-﻿@{
+﻿@model IEnumerable<ForumDyskusyjne.Models.Annoucement>
+@{
     ViewBag.Title = "Home Page";
 }
 <html>
 
 
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
 
-        .bg {
-            /* The image used */
-            background-image: url("../Content/Images/Img.png");
-            /* Full height */
-            height: 100%;
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
-   
-    <body>
-        <div class="bg">
+    .bg {
+        /* The image used */
+        background-image: url("../Content/Images/Img.png");
+        /* Full height */
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 
-            <br />
-            <br />
-            <br />
-            <div>
-                @Html.ActionLink("Ranks", "../Ranks/Index")
-            </div>
-            <br />
-            <br />
-            <br />
-            <div>
-                @Html.ActionLink("Annoucements", "../Annoucements/Index")
-            </div>
-            <br />
-            <br />
-            <br />
-            <div>
-                @Html.ActionLink("BannedWords", "../BannedWords/Index")
-            </div>
-            <br />
-            <br />
-            <br />
-            <div>
-                @Html.ActionLink("Forums", "../Forums/Index")
-            </div>
-            <br />
-            <br />
-            <br />
-            <div>
-                @Html.ActionLink("ForumCategories", "../ForumCategories/Index")
-            </div>
-            <br />
-            <br />
-            <br />
-            <div>
-                @Html.ActionLink("Messages", "../Messages/Index")
-            </div>
-            <br />
-            <br />
-            <br />
-            <div>
-                @Html.ActionLink("PrivateMessages", "../PrivateMessages/Index")
-            </div>
-            <br />
-            <br />
-            <br />
-            <div>
-                @Html.ActionLink("Threads", "../Threads/Index")
-            </div>
-
+<body>
+    <div class="bg">
+        <div>
+            Liczba zarejestrowanych użytkowników: @ViewBag.Registered
         </div>
-    </body>
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Text)
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+        <br />
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("Ranks", "../Ranks/Index")
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("Annoucements", "../Annoucements/Index")
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("BannedWords", "../BannedWords/Index")
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("Forums", "../Forums/Index")
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("ForumCategories", "../ForumCategories/Index")
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("Messages", "../Messages/Index")
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("PrivateMessages", "../PrivateMessages/Index")
+        </div>
+        <br />
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("Threads", "../Threads/Index")
+        </div>
+
+    </div>
+</body>
 </html>

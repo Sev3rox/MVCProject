@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ForumDyskusyjne.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ForumDyskusyjne.Controllers
 {
@@ -17,7 +18,15 @@ namespace ForumDyskusyjne.Controllers
         // GET: PrivateMessages
         public ActionResult Index()
         {
-            return View(db.PrivateMessages.ToList());
+            List<KeyValuePair<string,string>> pairs = new List<KeyValuePair<string, string>>();
+            foreach(var r in db.Users)
+            {
+                pairs.Add(new KeyValuePair<string, string>(r.Id, r.UserName));
+            }
+            ViewBag.pairs = pairs;
+            var idd = User.Identity.GetUserId();
+            var user = db.Users.FirstOrDefault(a => a.Id == idd);
+            return View(db.PrivateMessages.Where(a=>a.ReceiverId==idd||a.SenderId==idd||a.ReceiverId==null).ToList());
         }
 
         // GET: PrivateMessages/Details/5
@@ -38,6 +47,7 @@ namespace ForumDyskusyjne.Controllers
         // GET: PrivateMessages/Create
         public ActionResult Create()
         {
+            ViewBag.UserName = new SelectList(db.Users, "Id", "UserName");
             return View();
         }
 
@@ -46,10 +56,14 @@ namespace ForumDyskusyjne.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PrivateMessageId,Text,SenderId,ReceiverId,Attachment")] PrivateMessage privateMessage)
+        public ActionResult Create([Bind(Include = "PrivateMessageId,Text")] PrivateMessage privateMessage,string UserName)
         {
             if (ModelState.IsValid)
             {
+                var idd = User.Identity.GetUserId();
+                var user = db.Users.FirstOrDefault(a => a.Id == idd);
+                privateMessage.ReceiverId = UserName;
+                privateMessage.SenderId = user.Id;
                 db.PrivateMessages.Add(privateMessage);
                 db.SaveChanges();
                 return RedirectToAction("Index");

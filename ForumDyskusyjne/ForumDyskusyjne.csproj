@@ -170,10 +170,12 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminPanelController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AnnoucementsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ForumCategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ForumsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Areas\Admin\Controllers\MessagesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PrivateMessagesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThreadsController.cs" />
     <Compile Include="Areas\BlockedMsg\BlockedMsgAreaRegistration.cs" />
     <Compile Include="Areas\BlockedMsg\Controllers\AccountController.cs" />
@@ -189,6 +191,7 @@
     <Compile Include="Areas\User\Controllers\ForumsController.cs" />
     <Compile Include="Areas\User\Controllers\ManageController.cs" />
     <Compile Include="Areas\User\Controllers\MessagesController.cs" />
+    <Compile Include="Areas\User\Controllers\PrivateMessagesController.cs" />
     <Compile Include="Areas\User\Controllers\ThreadsController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -240,6 +243,10 @@
     <Compile Include="Migrations\202105241229452_v9.cs" />
     <Compile Include="Migrations\202105241229452_v9.Designer.cs">
       <DependentUpon>202105241229452_v9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106031828458_poprawa.cs" />
+    <Compile Include="Migrations\202106031828458_poprawa.Designer.cs">
+      <DependentUpon>202106031828458_poprawa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountForum.cs" />
@@ -404,6 +411,21 @@
     <Content Include="Areas\Moderator\Views\Messages\Details.cshtml" />
     <Content Include="Areas\Moderator\Views\Messages\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AdminPanel\Ranks.cshtml" />
+    <Content Include="Areas\Admin\Views\PrivateMessages\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\PrivateMessages\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\PrivateMessages\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\PrivateMessages\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PrivateMessages\Index.cshtml" />
+    <Content Include="Areas\User\Views\PrivateMessages\Create.cshtml" />
+    <Content Include="Areas\User\Views\PrivateMessages\Delete.cshtml" />
+    <Content Include="Areas\User\Views\PrivateMessages\Details.cshtml" />
+    <Content Include="Areas\User\Views\PrivateMessages\Edit.cshtml" />
+    <Content Include="Areas\User\Views\PrivateMessages\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Annoucements\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Annoucements\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Annoucements\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Annoucements\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Annoucements\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -506,6 +528,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105241229452_v9.resx">
       <DependentUpon>202105241229452_v9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106031828458_poprawa.resx">
+      <DependentUpon>202106031828458_poprawa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
