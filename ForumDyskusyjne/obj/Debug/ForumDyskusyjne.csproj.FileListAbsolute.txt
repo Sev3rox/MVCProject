@@ -463,3 +463,4 @@ C:\Users\Mloteks71\Desktop\MVC\Nowy folder\MVCProject\ForumDyskusyjne\bin\Micros
 C:\Users\Mloteks71\Desktop\MVC\Nowy folder\MVCProject\ForumDyskusyjne\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Mloteks71\Desktop\MVC\Nowy folder\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csproj.CopyComplete
 C:\Users\Mloteks71\Desktop\MVC\Nowy folder\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.poprawa.resources
+C:\Users\PC\Desktop\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.poprawa.resources

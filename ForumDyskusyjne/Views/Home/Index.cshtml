@@ -5,90 +5,47 @@
 <html>
 
 
-<style>
-    body, html {
-        height: 100%;
-        margin: 0;
-    }
 
-    .bg {
-        /* The image used */
+<style>
+    body {
         background-image: url("../Content/Images/Img.png");
-        /* Full height */
-        height: 100%;
-        /* Center and scale the image nicely */
-        background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-attachment: fixed;
+        background-size: 100% 100%;
     }
 </style>
 
-<body>
-    <div class="bg">
-        <div>
-            Liczba zarejestrowanych użytkowników: @ViewBag.Registered
-        </div>
-        <table class="table">
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Text)
-                    </td>
-                </tr>
-            }
+<div style="        width: auto;
+        background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        border: solid;
+        border-width: 1px;
+        padding: 10px;
+     
+">
+   
 
-        </table>
+    <body>
+        <div class="bg">
+            <div>
+                Registered Users: @ViewBag.Registered
+            </div>
+            <table class="table">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Text)
+                        </td>
+                    </tr>
+                }
 
-        <br />
-        <br />
-        <br />
-        <div>
-            @Html.ActionLink("Ranks", "../Ranks/Index")
-        </div>
-        <br />
-        <br />
-        <br />
-        <div>
-            @Html.ActionLink("Annoucements", "../Annoucements/Index")
-        </div>
-        <br />
-        <br />
-        <br />
-        <div>
-            @Html.ActionLink("BannedWords", "../BannedWords/Index")
-        </div>
-        <br />
-        <br />
-        <br />
-        <div>
-            @Html.ActionLink("Forums", "../Forums/Index")
-        </div>
-        <br />
-        <br />
-        <br />
-        <div>
-            @Html.ActionLink("ForumCategories", "../ForumCategories/Index")
-        </div>
-        <br />
-        <br />
-        <br />
-        <div>
-            @Html.ActionLink("Messages", "../Messages/Index")
-        </div>
-        <br />
-        <br />
-        <br />
-        <div>
-            @Html.ActionLink("PrivateMessages", "../PrivateMessages/Index")
-        </div>
-        <br />
-        <br />
-        <br />
-        <div>
-            @Html.ActionLink("Threads", "../Threads/Index")
-        </div>
+            </table>
 
-    </div>
-</body>
+
+
+
+        </div>
+    </body>
 </html>
