@@ -101,6 +101,10 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             //}
             var dataSource = db.Messages.Where(a => a.ThreadId == id).ToList();
             IQueryable<Message>[] pom;
+            thread.Views++;
+            db.Entry(thread).State = EntityState.Modified;
+            db.SaveChanges();
+
             if (!Request.QueryString["Search"].IsEmpty())
             {
                 ViewBag.test = Request.QueryString["Search"];
@@ -149,6 +153,9 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             int PageSize = 5; 
             IdentityManager im = new IdentityManager();
             var user = im.GetUserByID(User.Identity.GetUserId());
+            string imreBase64Data = Convert.ToBase64String(user.Image);
+            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
+            ViewBag.Img = imgDataURL;
             if (user.onpage > 0)
             {
                 PageSize = user.onpage;

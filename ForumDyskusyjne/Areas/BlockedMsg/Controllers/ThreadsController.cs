@@ -144,8 +144,13 @@ namespace ForumDyskusyjne.Areas.BlockedMsg.Controllers
             var data = dataSource.Skip((int)Page * PageSize).Take(PageSize).ToList();
 
             this.ViewBag.MaxPage = (count / PageSize) - (count % PageSize == 0 ? 1 : 0);
-
+            string imreBase64Data = Convert.ToBase64String(user.Image);
+            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
+            ViewBag.Img = imgDataURL;
             this.ViewBag.Page = Page;
+            thread.Views++;
+            db.Entry(thread).State = EntityState.Modified;
+            db.SaveChanges();
             foreach (Message msg in data)
             {
                 if (db.Users.FirstOrDefault(x => x.Id == msg.AccountId) != null)

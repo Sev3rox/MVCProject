@@ -140,11 +140,15 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
             }
 
             var count = dataSource.Count();
-
+            thread.Views++;
+            db.Entry(thread).State = EntityState.Modified;
+            db.SaveChanges();
             var data = dataSource.Skip((int)Page * PageSize).Take(PageSize).ToList();
 
             this.ViewBag.MaxPage = (count / PageSize) - (count % PageSize == 0 ? 1 : 0);
-
+            string imreBase64Data = Convert.ToBase64String(user.Image);
+            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
+            ViewBag.Img = imgDataURL;
             this.ViewBag.Page = Page;
             foreach (Message msg in data)
             {

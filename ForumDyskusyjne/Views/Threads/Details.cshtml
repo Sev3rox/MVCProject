@@ -37,6 +37,12 @@ Views: @ViewBag.Views
     @foreach (var item in ViewBag.Messages)
     {
     <tr>
+        <td>
+            @if (item.User.Image != null)
+            {
+                <img src="@string.Format("data:image/png;base64,{0}", Convert.ToBase64String(item.User.Image))" />
+            }
+        </td>
         <td id="temp">
             @(new HtmlString(item.Content.ToString()))
         </td>
@@ -68,6 +74,6 @@ Views: @ViewBag.Views
 <form method="get">
     <input name="Page" type="number" value="@ViewBag.Page" hidden>
 <textarea name="Search" cols="40" rows="5"></textarea>
-    <input type="Submit" value="test" />
+    <input type="Submit" value="Wyszukaj" />
 </form>
 

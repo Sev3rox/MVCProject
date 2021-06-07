@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ForumDyskusyjne.Models.BannedWord>
+
+@{ ViewBag.Title = "Index"; }
+
+<h2>Banned Words</h2>
+
+<h2>@Html.ActionLink("Banned Tags", "IndexA")</h2>
+<br />
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Word)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Word)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.BannedWordId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.BannedWordId })
+    </td>
+</tr>}
+
+</table>

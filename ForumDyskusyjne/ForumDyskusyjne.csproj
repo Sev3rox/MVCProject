@@ -171,6 +171,7 @@
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminPanelController.cs" />
     <Compile Include="Areas\Admin\Controllers\AnnoucementsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BannedWordsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ForumCategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ForumsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
@@ -195,8 +196,6 @@
     <Compile Include="Areas\User\Controllers\ThreadsController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AnnoucementsController.cs" />
-    <Compile Include="Controllers\BannedWordsController.cs" />
     <Compile Include="Controllers\ForumCategoriesController.cs" />
     <Compile Include="Controllers\ForumsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -426,6 +425,12 @@
     <Content Include="Areas\Admin\Views\Annoucements\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Annoucements\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Annoucements\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BannedWords\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\BannedWords\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\BannedWords\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\BannedWords\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\BannedWords\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BannedWords\IndexA.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -471,16 +476,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Annoucements\Create.cshtml" />
-    <Content Include="Views\Annoucements\Delete.cshtml" />
-    <Content Include="Views\Annoucements\Details.cshtml" />
-    <Content Include="Views\Annoucements\Edit.cshtml" />
-    <Content Include="Views\Annoucements\Index.cshtml" />
-    <Content Include="Views\BannedWords\Create.cshtml" />
-    <Content Include="Views\BannedWords\Delete.cshtml" />
-    <Content Include="Views\BannedWords\Details.cshtml" />
-    <Content Include="Views\BannedWords\Edit.cshtml" />
-    <Content Include="Views\BannedWords\Index.cshtml" />
     <Content Include="Views\Forums\Index.cshtml" />
     <Content Include="Views\ForumCategories\Details.cshtml" />
     <Content Include="Views\ForumCategories\Index.cshtml" />

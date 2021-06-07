@@ -137,15 +137,16 @@ namespace ForumDyskusyjne.Controllers
             var data = dataSource.Skip((int)Page * PageSize).Take(PageSize).ToList();
 
             this.ViewBag.MaxPage = (count / PageSize) - (count % PageSize == 0 ? 1 : 0);
-
+            List<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string, string>>();
             this.ViewBag.Page = Page;
-
             foreach (Message msg in data)
             {
                 if (db.Users.FirstOrDefault(xx => xx.Id == msg.AccountId) != null)
                     msg.User = db.Users.FirstOrDefault(xx => xx.Id == msg.AccountId);
             }
-
+            thread.Views++;
+            db.Entry(thread).State = EntityState.Modified;
+            db.SaveChanges();
             ViewBag.Messages = data;
             if (thread == null)
             {

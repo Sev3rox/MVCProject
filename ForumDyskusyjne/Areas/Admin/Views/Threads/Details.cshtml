@@ -59,6 +59,12 @@ Views: @ViewBag.Views
     @foreach (var item in ViewBag.Messages)
     {
         <tr>
+            <td>
+                @if (item.User.Image != null)
+                {
+                <img src="@string.Format("data:image/png;base64,{0}", Convert.ToBase64String(item.User.Image))" />
+                }
+            </td>
             <td id="temp">
                 @(new HtmlString(item.Content.ToString()))
             </td>

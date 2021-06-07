@@ -36,16 +36,22 @@ Views: @ViewBag.Views
 <table class="table">
     @foreach (var item in ViewBag.Messages)
     {
-        <tr>
-            <td id="temp">
-                @(new HtmlString(item.Content.ToString()))
-            </td>
-            <td>
-                @item.User.UserName
-            </td>
+    <tr>
+        <td>
+            @if (item.User.Image != null)
+            {
+            <img src="@string.Format("data:image/png;base64,{0}", Convert.ToBase64String(item.User.Image))" />
+            }
+        </td>
+        <td id="temp">
+            @(new HtmlString(item.Content.ToString()))
+        </td>
+        <td>
+            @item.User.UserName
+        </td>
 
 
-        </tr>
+    </tr>
     }
 </table>
 

@@ -28,7 +28,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem =>item.Content)
+                @(new HtmlString(item.Content.ToString()))
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.User.UserName)
