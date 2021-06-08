@@ -61,7 +61,7 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
        
 
         // GET: Threads/Details/5
-        public ActionResult Details(int? id, int Page)
+        public ActionResult Details(int? id, int Page,string Search)
         {
             if (id == null)
             {
@@ -92,11 +92,14 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
 
             var dataSource= db.Messages.Where(a => a.ThreadId == id).ToList();
             IQueryable<Message>[] pom;
-            if (!Request.QueryString["Search"].IsEmpty())
+            string ten = Request.QueryString["Search"];
+            if (ten.IsEmpty() && ten == "")
+                ten = Search;
+            if (!ten.IsEmpty() && ten != "")
             {
-                ViewBag.test = Request.QueryString["Search"];
-
-                var temp = Request.QueryString["Search"].Split((char)10);
+                ViewBag.test = ten;
+                int xxx = 4;
+                var temp = ten.Split((char)10);
                 pom = new IQueryable<Message>[temp.Length];
                 for (int i = 0; i < temp.Length; i++)
                 {
@@ -138,6 +141,7 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
                 }
                 dataSource = pom[pom.Length - 1].ToList();
             }
+            ViewBag.SString = ten;
 
             var count = dataSource.Count();
             thread.Views++;
@@ -146,9 +150,7 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
             var data = dataSource.Skip((int)Page * PageSize).Take(PageSize).ToList();
 
             this.ViewBag.MaxPage = (count / PageSize) - (count % PageSize == 0 ? 1 : 0);
-            string imreBase64Data = Convert.ToBase64String(user.Image);
-            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
-            ViewBag.Img = imgDataURL;
+
             this.ViewBag.Page = Page;
             foreach (Message msg in data)
             {

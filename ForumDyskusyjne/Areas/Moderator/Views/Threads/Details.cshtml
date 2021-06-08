@@ -1,10 +1,8 @@
 ﻿@model ForumDyskusyjne.Models.Thread
 
-@{
-    ViewBag.Title = "Details";
-}
+@{ ViewBag.Title = "Details"; }
 
-<h2>Details</h2>
+</br>
 Answers: @ViewBag.Messagess
 Views: @ViewBag.Views
 <div>
@@ -58,50 +56,49 @@ Views: @ViewBag.Views
 <table class="table">
     @foreach (var item in ViewBag.Messages)
     {
-    <tr>
-        <td>
-            @if (item.User.Image != null)
-            {
-            <img src="@string.Format("data:image/png;base64,{0}", Convert.ToBase64String(item.User.Image))" />
-            }
-        </td>
-        <td id="temp">
-            @(new HtmlString(item.Content.ToString()))
-        </td>
-        <td>
-            @item.User.UserName
-        </td>
+<tr>
+    <td>
+        @if (item.User.Image != null)
+        {
+<img src="@string.Format("data:image/png;base64,{0}", Convert.ToBase64String(item.User.Image))" />                }
+    </td>
+    <td id="temp">
+        @(new HtmlString(item.Content.ToString()))
+    </td>
+    <td>
+        @item.User.UserName
+    </td>
 
-        <td>
-            @Html.ActionLink("DeleteMsg", "DeleteMsg", new { id = item.MessageId, id2 = Model.ThreadId }, null)|
-            @Html.ActionLink("EditMsg", "EditMsg", new { id = item.MessageId, id2 = Model.ThreadId }, null)
-
-
-        </td>
+    <td>
+        @Html.ActionLink("DeleteMsg", "DeleteMsg", new { id = item.MessageId, id2 = Model.ThreadId }, null)|
+        @Html.ActionLink("EditMsg", "EditMsg", new { id = item.MessageId, id2 = Model.ThreadId }, null)
 
 
-    </tr>
-    }
+    </td>
+
+
+</tr>}
 </table>
 
 </br>
 </br>
-
-
 @if (ViewBag.Page > 0)
 {
 
-    @Html.ActionLink("Prev", "Details", new { id = Model.ThreadId, Page = ViewBag.Page - 1 }, null);
+@Html.ActionLink("Prev", "Details", new { id = Model.ThreadId, Page = ViewBag.Page - 1, Search = ViewBag.SString }, null);
 }
 
 @if (ViewBag.Page < ViewBag.MaxPage)
 {
 
-    @Html.ActionLink("Next", "Details", new { id = Model.ThreadId, Page = ViewBag.Page + 1 }, null);
+@Html.ActionLink("Next", "Details", new { id = Model.ThreadId, Page = ViewBag.Page + 1, Search = ViewBag.SString }, null);
 }
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ThreadId })
+</p>
 <form method="get">
     <input name="Page" type="number" value="@ViewBag.Page" hidden>
 <textarea name="Search" cols="40" rows="5"></textarea>
-    <input type="Submit" value="test" />
+    <input type="Submit" value="Szukaj" />
 </form>
-

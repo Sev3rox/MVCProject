@@ -583,3 +583,242 @@ C:\Users\Mloteks71\Desktop\Nowy folder (15)\MVCProject\ForumDyskusyjne\obj\Debug
 C:\Users\Mloteks71\Desktop\Nowy folder (15)\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csproj.CopyComplete
 C:\Users\Mloteks71\Desktop\Nowy folder (15)\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.dll
 C:\Users\Mloteks71\Desktop\Nowy folder (15)\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.pdb
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\ForumDyskusyjne.dll.config
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\ForumDyskusyjne.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\ForumDyskusyjne.pdb
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\csc.exe
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\csc.exe.config
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\csc.rsp
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\csi.exe
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\csi.exe.config
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\csi.rsp
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.AppContext.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Console.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.IO.Compression.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Net.Http.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.ValueTuple.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\vbc.exe
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\vbc.exe.config
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\vbc.rsp
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Antlr3.Runtime.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\EntityFramework.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\EntityFramework.SqlServer.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Newtonsoft.Json.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Owin.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.Helpers.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.Mvc.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.Optimization.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.Razor.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.WebPages.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\WebGrease.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\EntityFramework.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\EntityFramework.SqlServer.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.Helpers.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.Mvc.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.Optimization.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.Razor.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.WebPages.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Newtonsoft.Json.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Antlr3.Runtime.pdb
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csprojAssemblyReference.cache
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v1.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v2.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v3.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v4.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v5.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v6.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v7.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v8.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v9.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.poprawa.resources
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csproj.GenerateResource.cache
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csproj.CoreCompileInputs.cache
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csproj.CopyComplete
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.dll
+C:\Users\Mloteks71\Desktop\Nowy folder (15)\Jeszcze nowsze, bo jarek zjebał\MVCProject\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.pdb
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\ForumDyskusyjne.dll.config
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\ForumDyskusyjne.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\ForumDyskusyjne.pdb
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\csc.exe
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\csc.exe.config
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\csc.rsp
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\csi.exe
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\csi.exe.config
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\csi.rsp
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.AppContext.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Console.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.IO.Compression.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Net.Http.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Net.Sockets.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.ValueTuple.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Xml.XPath.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\vbc.exe
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\vbc.exe.config
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\vbc.rsp
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\EntityFramework.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Owin.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\WebGrease.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\EntityFramework.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.Optimization.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v1.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v2.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v3.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v4.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v5.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v6.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v7.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v8.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v9.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.poprawa.resources
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.csproj.CopyComplete
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.dll
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.pdb
+C:\Users\PC\Desktop\Forum\ForumDyskusyjne\obj\Debug\ForumDyskusyjne.Migrations.v10.resources

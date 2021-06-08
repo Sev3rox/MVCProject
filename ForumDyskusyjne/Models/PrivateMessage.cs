@@ -10,6 +10,7 @@ namespace ForumDyskusyjne.Models
     {
     
         public int PrivateMessageId { get; set; }
+        [Required]
         public string Text { get; set; }
         public string SenderId { get; set; }
         public virtual ApplicationUser Sender { get; set; }

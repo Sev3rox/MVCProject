@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<ForumDyskusyjne.Models.Thread>
 
-@{
-    ViewBag.Title = "Index";
-}
+@{ ViewBag.Title = "Index"; }
 
-<h2>Index</h2>
+</br>
 Threads on Forum: @ViewBag.Threads
 Messages on Forum: @ViewBag.Messages
 <p>
@@ -24,23 +22,22 @@ Messages on Forum: @ViewBag.Messages
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Forum.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Forum.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
 
-            <td>
-                <!----  Html.ActionLink("Edit", "Edit", new { id = item.ThreadId }) |
+    <td>
+        <!----  Html.ActionLink("Edit", "Edit", new { id = item.ThreadId }) |
 
-                  Html.ActionLink("Delete", "Delete", new { id = item.ThreadId }) |-->
+          Html.ActionLink("Delete", "Delete", new { id = item.ThreadId }) |-->
 
-                @Html.ActionLink("Go To Thread", "Details", new { id = item.ThreadId, Page = 0 }, null)
+        @Html.ActionLink("Go To Thread", "Details", new { id = item.ThreadId, Page = 0 }, null)
 
-            </td>
-        </tr>
-    }
+    </td>
+</tr>}
 
 </table>

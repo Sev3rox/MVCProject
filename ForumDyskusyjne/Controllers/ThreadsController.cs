@@ -60,7 +60,7 @@ namespace ForumDyskusyjne.Controllers
 
 
         // GET: Threads/Details/5
-        public ActionResult Details(int? id, int Page)
+        public ActionResult Details(int? id, int Page,string Search)
         {
             if (id == null)
             {
@@ -85,18 +85,20 @@ namespace ForumDyskusyjne.Controllers
             
             var dataSource= db.Messages.Where(a => a.ThreadId == id).ToList();
             IQueryable<Message>[] pom;
-            if (!Request.QueryString["Search"].IsEmpty())
+            string ten = Request.QueryString["Search"];
+            if (ten.IsEmpty() && ten == "")
+                ten = Search;
+            if (!ten.IsEmpty() && ten != "")
             {
-                ViewBag.test = Request.QueryString["Search"];
-
-                var temp = Request.QueryString["Search"].Split((char)10);
+                ViewBag.test = ten;
+                int xxx = 4;
+                var temp = ten.Split((char)10);
                 pom = new IQueryable<Message>[temp.Length];
                 for (int i = 0; i < temp.Length; i++)
                 {
                     string[] h = temp[i].Split((char)13);
                     temp[i] = h[0];
                 }
-                int x = 5;
                 for (int i = 0; i < temp.Length; i++)
                 {
                     string s = temp[i];
@@ -131,6 +133,7 @@ namespace ForumDyskusyjne.Controllers
                 }
                 dataSource = pom[pom.Length - 1].ToList();
             }
+            ViewBag.SString = ten;
 
             var count = dataSource.Count();
 

@@ -105,9 +105,12 @@ namespace ForumDyskusyjne.Areas.User.Controllers
             ViewBag.UserPage = userr.onpage;
             var x = returnimg(userr.msg);
             ViewBag.Image = db.Ranks.FirstOrDefault(a => a.Name == x.ToString()).Image;
-            string imreBase64Data = Convert.ToBase64String(userr.Image);
-            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
-            ViewBag.Img = imgDataURL;
+            if (userr.Image != null)
+            {
+                string imreBase64Data = Convert.ToBase64String(userr.Image);
+                string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
+                ViewBag.Img = imgDataURL;
+            }
             return View(model);
         }
 
@@ -142,7 +145,7 @@ namespace ForumDyskusyjne.Areas.User.Controllers
             Bitmap image = new Bitmap(imageStream);
             int width = image.Width;
             int height = image.Height;
-            if (width > 200 || height > 200)
+            if (width > 90 || height > 90)
             {
                 return RedirectToAction("Index", "Manage");
                 //ModelState.AddModelError("", "Zły obrazek");

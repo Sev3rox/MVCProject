@@ -80,7 +80,7 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
 
 
         // GET: Threads/Details/5
-        public ActionResult Details(int? id, int Page)
+        public ActionResult Details(int? id, int Page,string Search)
         {
             if (id == null)
             {
@@ -104,31 +104,34 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             thread.Views++;
             db.Entry(thread).State = EntityState.Modified;
             db.SaveChanges();
-
-            if (!Request.QueryString["Search"].IsEmpty())
+            string ten = Request.QueryString["Search"];
+            if (ten.IsEmpty() && ten == "")
+                ten = Search;
+            if (!ten.IsEmpty() && ten != "")
             {
-                ViewBag.test = Request.QueryString["Search"];
-            
-                var temp = Request.QueryString["Search"].Split((char)10);
+                ViewBag.test = ten;
+                int xxx = 4;
+                var temp = ten.Split((char)10);
                 pom = new IQueryable<Message>[temp.Length];
-                for (int i=0;i<temp.Length;i++)
+                for (int i = 0; i < temp.Length; i++)
                 {
-                    string[] h=temp[i].Split((char)13);
+                    string[] h = temp[i].Split((char)13);
                     temp[i] = h[0];
                 }
                 int x = 5;
-                for(int i=0;i<temp.Length;i++)
-                { string s = temp[i];
-                    var c=s.Split('\"');
-                    if(s.ToLower().Contains("\"or\""))
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    string s = temp[i];
+                    var c = s.Split('\"');
+                    if (s.ToLower().Contains("\"or\""))
                     {
                         int l1 = Int32.Parse(c[0]);
                         int l2 = Int32.Parse(c[2]);
                         pom[i] = pom[l1].Union(pom[l2]);
                     }
-                    else 
+                    else
                     {
-                        if(s.ToLower().Contains("\"and\""))
+                        if (s.ToLower().Contains("\"and\""))
                         {
                             int l1 = Int32.Parse(c[0]);
                             int l2 = Int32.Parse(c[2]);
@@ -136,7 +139,7 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
                         }
                         else
                         {
-                            if(s.ToLower().Contains("\"not\""))
+                            if (s.ToLower().Contains("\"not\""))
                             {
                                 int l2 = Int32.Parse(c[2]);
                                 pom[i] = db.Messages.Except(pom[l2]);
@@ -148,9 +151,10 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
                         }
                     }
                 }
-                dataSource = pom[pom.Length-1].ToList();
+                dataSource = pom[pom.Length - 1].ToList();
             }
-            int PageSize = 5; 
+            int PageSize = 5;
+            ViewBag.SString = ten;
             IdentityManager im = new IdentityManager();
             var user = im.GetUserByID(User.Identity.GetUserId());
             string imreBase64Data = Convert.ToBase64String(user.Image);
@@ -263,16 +267,6 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
                 return HttpNotFound();
             }
             return View(thread);
-        }
-        public ActionResult Report(int? id, int id2)
-        {
-            PrivateMessage pm = new PrivateMessage();
-            pm.ReceiverId = null;
-            pm.SenderId = User.Identity.GetUserId();
-            pm.Text = "<div style=\"color:red\">Reported message: Thread Id:" + id2.ToString() + "Message Id:" + id.ToString() + "</div>";
-            db.PrivateMessages.Add(pm);
-            db.SaveChanges();
-            return RedirectToAction("Details",new { id = id2, Page = 0 });
         }
 
         public ActionResult DeleteMsg(int id, int id2)

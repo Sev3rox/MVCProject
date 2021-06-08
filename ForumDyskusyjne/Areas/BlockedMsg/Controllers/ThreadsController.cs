@@ -61,7 +61,7 @@ namespace ForumDyskusyjne.Areas.BlockedMsg.Controllers
       
 
         // GET: Threads/Details/5
-        public ActionResult Details(int? id, int Page)
+        public ActionResult Details(int? id, int Page,string Search)
         {
             if (id == null)
             {
@@ -92,11 +92,14 @@ namespace ForumDyskusyjne.Areas.BlockedMsg.Controllers
 
             var dataSource= db.Messages.Where(a => a.ThreadId == id).ToList();
             IQueryable<Message>[] pom;
-            if (!Request.QueryString["Search"].IsEmpty())
+            string ten = Request.QueryString["Search"];
+            if (ten.IsEmpty() && ten == "")
+                ten = Search;
+            if (!ten.IsEmpty() && ten != "")
             {
-                ViewBag.test = Request.QueryString["Search"];
-
-                var temp = Request.QueryString["Search"].Split((char)10);
+                ViewBag.test = ten;
+                int xxx = 4;
+                var temp = ten.Split((char)10);
                 pom = new IQueryable<Message>[temp.Length];
                 for (int i = 0; i < temp.Length; i++)
                 {
@@ -138,6 +141,7 @@ namespace ForumDyskusyjne.Areas.BlockedMsg.Controllers
                 }
                 dataSource = pom[pom.Length - 1].ToList();
             }
+            ViewBag.SString = ten;
 
             var count = dataSource.Count();
 
@@ -164,6 +168,16 @@ namespace ForumDyskusyjne.Areas.BlockedMsg.Controllers
             return View(thread);
         }
 
+        public ActionResult Report(int? id, int id2)
+        {
+            PrivateMessage pm = new PrivateMessage();
+            pm.ReceiverId = null;
+            pm.SenderId = User.Identity.GetUserId();
+            pm.Text = "<div style=\"color:red\">Reported message: Thread Id: " + id2.ToString() + "Message Id: " + id.ToString() + "</div>";
+            db.PrivateMessages.Add(pm);
+            db.SaveChanges();
+            return RedirectToAction("Details", new { id = id2, Page = 0 });
+        }
         // GET: Threads/Create
         public ActionResult Create(int id)
         {
