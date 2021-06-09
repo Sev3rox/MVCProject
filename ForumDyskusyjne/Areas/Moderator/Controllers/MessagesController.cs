@@ -60,28 +60,61 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MessageId,Content,Order,ThreadId,AccountId")] Message message)
         {
-            foreach (BannedWord w in db.BannedWords)
+            foreach (BannedWord w in db.BannedWords.Where(a => !a.Word.StartsWith("<")))
             {
                 if (message.Content.ToLower().Contains(w.Word.ToLower())) ModelState.AddModelError("", "Użyto zakazane słowo " + w.Word);
             }
             if (ModelState.IsValid)
             {
+                try
+                {
+                    foreach (BannedWord w in db.BannedWords.Where(a => a.Word.StartsWith("<")))
+                    {
+                        while (message.Content.Contains(w.Word.Substring(0, 2)))
+                        {
+                            int temp = message.Content.IndexOf(w.Word.Substring(0, 2));
+                            for (int i = temp; ; i++)
+                            {
+                                if (message.Content[i] == '>')
+                                {
+                                    if (message.Content[i - 1] == '/')
+                                    {
+                                        string a = message.Content.Substring(0, temp);
+                                        string b = message.Content.Substring(i + 1, message.Content.Length - (i + 1));
+                                        message.Content = a + b;
+                                    }
+                                    else
+                                    {
+                                        string a = message.Content.Substring(0, temp);
+                                        string b3 = "</" + w.Word.Substring(1, w.Word.Length - 2) + ">";
+                                        int b1 = message.Content.IndexOf(b3);
+                                        int b4 = b1 + w.Word.Length + 1;
+                                        int b2 = message.Content.Length - b4;
+                                        string b = message.Content.Substring(b1, b2);
+                                        message.Content = a + b;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    db.Messages.Add(message);
+                    var idd = User.Identity.GetUserId();
+                    var user = db.Users.FirstOrDefault(a => a.Id == idd);
+                    user.msg = user.msg + 1;
+                    db.Entry(user).State = EntityState.Modified;
+                    db.SaveChanges();
 
-                db.Messages.Add(message);
-
-
-                var idd = User.Identity.GetUserId();
-                var user = db.Users.FirstOrDefault(a => a.Id == idd);
-                user.msg = user.msg + 1;
-                db.Entry(user).State = EntityState.Modified;
-                db.SaveChanges();
-
-                db.SaveChanges();
-                return Redirect("/Moderator/Threads/Details/" + message.ThreadId + "?Page=0");
-
+                    return Redirect("/Admin/Threads/Details/" + message.ThreadId + "?Page=0");
+                }
+                catch
+                {
+                    return Redirect("/Admin/Threads/Details/" + message.ThreadId + "?Page=0");
+                }
             }
 
             ViewBag.ThreadId = new SelectList(db.Threads, "ThreadId", "Name", message.ThreadId);
@@ -122,6 +155,7 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MessageId,Content,Order,ThreadId,AccountId")] Message message)
         {

@@ -104,53 +104,57 @@ namespace ForumDyskusyjne.Areas.User.Controllers
             var dataSource = db.Messages.Where(a => a.ThreadId == id).ToList();
             IQueryable<Message>[] pom;
             string ten = Request.QueryString["Search"];
-            if (ten.IsEmpty() && ten == "")
-                ten = Search;
-            if (!ten.IsEmpty() && ten != "")
+            try
             {
-                ViewBag.test = ten;
-                int xxx = 4;
-                var temp = ten.Split((char)10);
-                pom = new IQueryable<Message>[temp.Length];
-                for (int i = 0; i < temp.Length; i++)
+                if (ten.IsEmpty() && ten == "")
+                    ten = Search;
+                if (!ten.IsEmpty() && ten != "")
                 {
-                    string[] h = temp[i].Split((char)13);
-                    temp[i] = h[0];
-                }
-                for (int i = 0; i < temp.Length; i++)
-                {
-                    string s = temp[i];
-                    var c = s.Split('\"');
-                    if (s.ToLower().Contains("\"or\""))
+                    ViewBag.test = ten;
+                    int xxx = 4;
+                    var temp = ten.Split((char)10);
+                    pom = new IQueryable<Message>[temp.Length];
+                    for (int i = 0; i < temp.Length; i++)
                     {
-                        int l1 = Int32.Parse(c[0]);
-                        int l2 = Int32.Parse(c[2]);
-                        pom[i] = pom[l1].Union(pom[l2]);
+                        string[] h = temp[i].Split((char)13);
+                        temp[i] = h[0];
                     }
-                    else
+                    for (int i = 0; i < temp.Length; i++)
                     {
-                        if (s.ToLower().Contains("\"and\""))
+                        string s = temp[i];
+                        var c = s.Split('\"');
+                        if (s.ToLower().Contains("\"or\""))
                         {
                             int l1 = Int32.Parse(c[0]);
                             int l2 = Int32.Parse(c[2]);
-                            pom[i] = pom[l1].Intersect(pom[l2]);
+                            pom[i] = pom[l1].Union(pom[l2]);
                         }
                         else
                         {
-                            if (s.ToLower().Contains("\"not\""))
+                            if (s.ToLower().Contains("\"and\""))
                             {
+                                int l1 = Int32.Parse(c[0]);
                                 int l2 = Int32.Parse(c[2]);
-                                pom[i] = db.Messages.Where(a => a.ThreadId == id).Except(pom[l2]);
+                                pom[i] = pom[l1].Intersect(pom[l2]);
                             }
                             else
                             {
-                                pom[i] = db.Messages.Where(a => a.Content.ToLower().Contains(s) && a.ThreadId == id);
+                                if (s.ToLower().Contains("\"not\""))
+                                {
+                                    int l2 = Int32.Parse(c[2]);
+                                    pom[i] = db.Messages.Where(a => a.ThreadId == id).Except(pom[l2]);
+                                }
+                                else
+                                {
+                                    pom[i] = db.Messages.Where(a => a.Content.ToLower().Contains(s) && a.ThreadId == id);
+                                }
                             }
                         }
                     }
+                    dataSource = pom[pom.Length - 1].ToList();
                 }
-                dataSource = pom[pom.Length - 1].ToList();
             }
+            catch { }
             ViewBag.SString = ten;
 
             var count = dataSource.Count();

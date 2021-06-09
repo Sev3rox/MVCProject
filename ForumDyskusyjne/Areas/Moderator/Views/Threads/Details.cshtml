@@ -93,9 +93,7 @@ Views: @ViewBag.Views
 
 @Html.ActionLink("Next", "Details", new { id = Model.ThreadId, Page = ViewBag.Page + 1, Search = ViewBag.SString }, null);
 }
-
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ThreadId })
+onLink("Edit", "Edit", new { id = Model.ThreadId })
 </p>
 <form method="get">
     <input name="Page" type="number" value="@ViewBag.Page" hidden>
