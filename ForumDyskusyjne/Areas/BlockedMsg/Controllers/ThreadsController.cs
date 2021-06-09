@@ -130,11 +130,11 @@ namespace ForumDyskusyjne.Areas.BlockedMsg.Controllers
                             if (s.ToLower().Contains("\"not\""))
                             {
                                 int l2 = Int32.Parse(c[2]);
-                                pom[i] = db.Messages.Except(pom[l2]);
+                                pom[i] = db.Messages.Where(a => a.ThreadId == id).Except(pom[l2]);
                             }
                             else
                             {
-                                pom[i] = db.Messages.Where(a => a.Content.ToLower().Contains(s));
+                                pom[i] = db.Messages.Where(a => a.Content.ToLower().Contains(s) && a.ThreadId == id);
                             }
                         }
                     }
@@ -148,9 +148,6 @@ namespace ForumDyskusyjne.Areas.BlockedMsg.Controllers
             var data = dataSource.Skip((int)Page * PageSize).Take(PageSize).ToList();
 
             this.ViewBag.MaxPage = (count / PageSize) - (count % PageSize == 0 ? 1 : 0);
-            string imreBase64Data = Convert.ToBase64String(user.Image);
-            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
-            ViewBag.Img = imgDataURL;
             this.ViewBag.Page = Page;
             thread.Views++;
             db.Entry(thread).State = EntityState.Modified;

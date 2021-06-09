@@ -142,11 +142,11 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
                             if (s.ToLower().Contains("\"not\""))
                             {
                                 int l2 = Int32.Parse(c[2]);
-                                pom[i] = db.Messages.Except(pom[l2]);
+                                pom[i] = db.Messages.Where(a=>a.ThreadId == id).Except(pom[l2]);
                             }
                             else
                             {
-                                pom[i] = db.Messages.Where(a => a.Content.ToLower().Contains(s));
+                                pom[i] = db.Messages.Where(a => a.Content.ToLower().Contains(s)&&a.ThreadId==id);
                             }
                         }
                     }
@@ -157,9 +157,6 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             ViewBag.SString = ten;
             IdentityManager im = new IdentityManager();
             var user = im.GetUserByID(User.Identity.GetUserId());
-            string imreBase64Data = Convert.ToBase64String(user.Image);
-            string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
-            ViewBag.Img = imgDataURL;
             if (user.onpage > 0)
             {
                 PageSize = user.onpage;

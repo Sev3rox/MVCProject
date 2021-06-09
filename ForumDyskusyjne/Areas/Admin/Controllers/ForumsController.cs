@@ -37,7 +37,11 @@ namespace ForumDyskusyjne.Areas.Admin.Controllers
             var alll = db.Users.ToList();
           foreach(var x in alll)
             {
-                x.AccountForums.Add(db.AccountForums.FirstOrDefault(a => a.AccountId == x.Id));
+                var pomx = db.AccountForums.Where(a => a.AccountId == x.Id).ToList();
+                foreach (var pomxx in pomx)
+                {
+                    x.AccountForums.Add(pomxx); /////;//
+                }
             }
             var all =new List<ApplicationUser>();
             //tu sprawdzanie czy ma moda

@@ -130,11 +130,11 @@ namespace ForumDyskusyjne.Areas.Moderator.Controllers
                             if (s.ToLower().Contains("\"not\""))
                             {
                                 int l2 = Int32.Parse(c[2]);
-                                pom[i] = db.Messages.Except(pom[l2]);
+                                pom[i] = db.Messages.Where(a => a.ThreadId == id).Except(pom[l2]);
                             }
                             else
                             {
-                                pom[i] = db.Messages.Where(a => a.Content.ToLower().Contains(s));
+                                pom[i] = db.Messages.Where(a => a.Content.ToLower().Contains(s) && a.ThreadId == id);
                             }
                         }
                     }
